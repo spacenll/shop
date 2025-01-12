@@ -102,10 +102,22 @@ body {
     flex-wrap: wrap;
 }
 
-.top-product img {
-    width: 300px;
+/* تنسيق صور المنتجات */
+.products-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
     border-radius: 8px;
 }
+
+/* تنسيق صورة المنتج الأكثر طلبًا */
+.top-product img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
 
 .product-details {
     max-width: 300px;

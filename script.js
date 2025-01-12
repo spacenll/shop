@@ -37,6 +37,7 @@ function calculateTotal() {
 // عرض السلة
 function showCart() {
     const cartModal = document.getElementById('cart-modal');
+        cartModal.classList.add('visible');
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
 
@@ -74,6 +75,10 @@ function showCart() {
 function closeCart() {
     const cartModal = document.getElementById('cart-modal');
     cartModal.classList.add('hidden');
+}
+function toggleCart() {
+    const cartModal = document.getElementById('cart-modal');
+    cartModal.classList.toggle('visible'); // إضافة أو إزالة الصندوق عند النقر
 }
 
 // زيادة الكمية

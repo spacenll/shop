@@ -18,7 +18,10 @@ function addToCart(productId, productName) {
 
     alert(`${productName} تمت إضافته إلى السلة.`);
 }
-
+function scrollToOrderForm() {
+    const orderFormSection = document.getElementById('order-form-section');
+    orderFormSection.scrollIntoView({ behavior: 'smooth' });
+}
 // الحصول على سعر المنتج بناءً على معرف المنتج
 function getProductPrice(productId) {
     const prices = {

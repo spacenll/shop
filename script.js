@@ -4,6 +4,10 @@ let cart = [];
 // إضافة المنتج إلى السلة
 function addToCart(productId, productName) {
     const productPrice = getProductPrice(productId); // الحصول على السعر بناءً على المنتج
+    if (productPrice <= 0) {
+        alert('حدث خطأ أثناء إضافة المنتج. يرجى المحاولة لاحقًا.');
+        return;
+    }
     const productExists = cart.find(item => item.id === productId);
 
     if (productExists) {
@@ -17,17 +21,14 @@ function addToCart(productId, productName) {
 
 // الحصول على سعر المنتج بناءً على معرف المنتج
 function getProductPrice(productId) {
-    if (productId === 101) return 5; // سعر كوب فاخر
-    if (productId === 102) return 4; // سعر كوب كلاسيكي
-    if (productId === 103) return 4; // سعر كوب عصري
-    return 0;
+    const prices = {
+        101: 5, // سعر كوب فاخر
+        102: 4, // سعر كوب كلاسيكي
+        103: 4  // سعر كوب عصري
+    };
+    return prices[productId] || 0;
 }
-function toggleCart() {
-    const cartModal = document.querySelector('.cart-modal');
-    if (cartModal) {
-        cartModal.classList.toggle('visible'); // إضافة أو إزالة الصندوق
-    }
-}
+
 // حساب المجموع الإجمالي
 function calculateTotal() {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -86,7 +87,7 @@ function decreaseQuantity(index) {
     if (cart[index].quantity > 1) {
         cart[index].quantity -= 1;
     } else {
-        cart.splice(index, 1); // إزالة المنتج إذا كانت الكمية 1
+        removeFromCart(index); // إزالة المنتج إذا كانت الكمية 1
     }
     showCart();
 }
@@ -99,12 +100,16 @@ function removeFromCart(index) {
 
 // إرسال الطلب عبر واتساب
 function sendWhatsApp() {
-    const name = document.getElementById('name').value;
-    const address = document.getElementById('address').value;
-    const notes = document.getElementById('notes').value;
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const notes = document.getElementById('notes').value.trim();
 
-    if (!name || !address || cart.length === 0) {
-        alert('يرجى ملء جميع الحقول المطلوبة وإضافة منتج إلى السلة!');
+    if (!name || !address) {
+        alert('يرجى ملء جميع الحقول المطلوبة!');
+        return;
+    }
+    if (cart.length === 0) {
+        alert('سلتك فارغة! يرجى إضافة منتجات.');
         return;
     }
 
@@ -118,7 +123,7 @@ function sendWhatsApp() {
         `المجموع الإجمالي: ${total} ريال\n` +
         `ملاحظات إضافية: ${notes || 'لا توجد ملاحظات'}\n`;
 
-    const phone = '+96877267075';
+    const phone = '+96877267075'; // رقم الواتساب
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }

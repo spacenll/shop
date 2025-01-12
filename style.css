@@ -229,7 +229,57 @@ form button:hover {
     opacity: 1;
     transform: translateY(0);
 }
+.cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #a38264;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
 
+.cart-button:hover {
+    background-color: #86654a;
+    transform: scale(1.1);
+}
+
+/* تحسين الخطوط للأجهزة الصغيرة */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* تصغير حجم الخط العام */
+    }
+
+    header h1 {
+        font-size: 18px; /* تحسين حجم عنوان الصفحة */
+    }
+
+    .product h4 {
+        font-size: 16px; /* تحسين حجم اسم المنتج */
+    }
+
+    .product button {
+        font-size: 14px; /* تحسين حجم أزرار المنتجات */
+    }
+
+    .cart-modal {
+        width: 90%;
+        padding: 15px;
+        font-size: 14px; /* تحسين النصوص في نافذة السلة */
+    }
+
+    .cart-button {
+        font-size: 14px; /* تقليل حجم زر عرض السلة */
+        padding: 8px 12px; /* تحسين المساحة في الزر */
+    }
+}
 /* استجابة للأجهزة */
 @media (max-width: 600px) {
     header h1 {

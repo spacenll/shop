@@ -22,7 +22,12 @@ function getProductPrice(productId) {
     if (productId === 103) return 4; // سعر كوب عصري
     return 0;
 }
-
+function toggleCart() {
+    const cartModal = document.querySelector('.cart-modal');
+    if (cartModal) {
+        cartModal.classList.toggle('visible'); // إضافة أو إزالة الصندوق
+    }
+}
 // حساب المجموع الإجمالي
 function calculateTotal() {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);

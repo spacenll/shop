@@ -386,3 +386,7 @@ form button:hover {
 .close-cart-btn:hover {
     background-color: #91746b;
 }
+
+.cart-backdrop.visible {
+    display: block;
+}

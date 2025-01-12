@@ -236,6 +236,7 @@ form button:hover {
     transform: translateY(0);
 }
 .cart-button {
+       font-family: 'Alexandria';
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -281,10 +282,7 @@ form button:hover {
         font-size: 14px; /* تحسين النصوص في نافذة السلة */
     }
 
-    .cart-button {
-        font-size: 14px; /* تقليل حجم زر عرض السلة */
-        padding: 8px 12px; /* تحسين المساحة في الزر */
-    }
+ 
 }
 /* استجابة للأجهزة */
 @media (max-width: 600px) {
@@ -326,15 +324,7 @@ form button:hover {
 }
 
 /* إخفاء زر الإغلاق عند النقر على السلة */
-.cart-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 
 .cart-button:hover {
     background-color: #45a049;

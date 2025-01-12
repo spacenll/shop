@@ -1,16 +1,6 @@
 // متغير لتخزين تفاصيل السلة
 let cart = [];
-function handleScroll() {
-    const sections = document.querySelectorAll(".fade-in-section");
-    sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
 
-        // إذا كانت بداية العنصر داخل نافذة العرض، أضف الفئة visible
-        if (sectionTop < windowHeight - 50) {
-            section.classList.add("visible");
-        }
-    });
 // إضافة المنتج إلى السلة
 function addToCart(productId, productName) {
     const productPrice = getProductPrice(productId); // الحصول على السعر بناءً على المنتج

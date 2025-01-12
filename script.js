@@ -45,11 +45,11 @@ function calculateTotal() {
 // عرض السلة
 function showCart() {
     const cartModal = document.getElementById('cart-modal');
-        cartModal.classList.add('visible');
     const cartBackdrop = document.getElementById('cart-backdrop');
     if (cartModal && cartBackdrop) {
         cartModal.classList.add('visible');
         cartBackdrop.classList.add('visible');
+    }
         
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
@@ -86,10 +86,7 @@ function showCart() {
 
 // إغلاق السلة
 function closeCart() {
-    const cartModal = document.getElementById('cart-modal');
-    cartModal.classList.remove('visible'); 
-    
-       const cartModal = document.getElementById('cart-modal');
+  const cartModal = document.getElementById('cart-modal');
     const cartBackdrop = document.getElementById('cart-backdrop');
     if (cartModal && cartBackdrop) {
         cartModal.classList.remove('visible');

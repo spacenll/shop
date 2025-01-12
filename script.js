@@ -19,8 +19,12 @@ function addToCart(productId, productName) {
     alert(`${productName} تمت إضافته إلى السلة.`);
 }
 function scrollToOrderForm() {
-    const orderFormSection = document.getElementById('order-form-section');
-    orderFormSection.scrollIntoView({ behavior: 'smooth' });
+   const orderFormSection = document.getElementById('order');
+    if (orderFormSection) {
+        orderFormSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        console.error("العنصر بالقسم 'order' غير موجود.");
+    }
 }
 // الحصول على سعر المنتج بناءً على معرف المنتج
 function getProductPrice(productId) {

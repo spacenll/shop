@@ -1,6 +1,6 @@
 /* عام */
 body {
-    font-family: 'Alexandria', sans-serif;
+    font-family: 'Alexandria', sans-serif; /* الخط الأساسي */
     margin: 0;
     padding: 0;
     background-color: #f8f4f0;
@@ -13,6 +13,9 @@ body {
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, p, button {
+    font-family: 'Alexandria', sans-serif;
 }
 
 /* الشعار */
@@ -88,7 +91,7 @@ body {
 .product button {
     background-color: #a38264;
     color: #ffffff;
-     font-family: 'Alexandria'
+    font-family: 'Alexandria', sans-serif;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -213,12 +216,12 @@ form button:hover {
 }
 
 .order-form-section {
-    padding: 20px;
+    padding: 50px;
     max-width: 400px;
     margin: auto;
     background-color: #ffffff;
     border: 1px solid #e0dcd7;
-    border-radius: 8px;
+    border-radius: 50px;
 }
 
 .order-form-section h2 {

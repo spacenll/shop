@@ -295,8 +295,70 @@ form button:hover {
         padding: 10px;
     }
 
-    .cart-modal {
-        width: 90%;
-        padding: 15px;
-    }
+    
+}
+
+/* إخفاء نافذة السلة بشكل افتراضي */
+.cart-modal {
+    display: none; /* إخفاء العنصر بشكل افتراضي */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    z-index: 1000;
+}
+
+/* عندما تكون نافذة السلة مرئية */
+.cart-modal.visible {
+    display: block;
+}
+
+/* إخفاء زر الإغلاق عند النقر على السلة */
+.cart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-button:hover {
+    background-color: #45a049;
+}
+
+/* تنسيق الأزرار داخل السلة */
+.cart-item button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #e53935;
+}
+
+.close-cart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-cart-btn:hover {
+    background-color: #f4511e;
 }

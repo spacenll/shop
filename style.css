@@ -332,6 +332,8 @@ form button:hover {
     width: 80%;
     max-width: 500px;
     z-index: 1000;
+        transition: background-color 0.3s ease-in-out;
+
 }
 
 /* عندما تكون نافذة السلة مرئية */
@@ -369,6 +371,8 @@ form button:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+
 }
 .cart-backdrop {
     display: none;
@@ -379,6 +383,8 @@ form button:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* خلفية داكنة شفافة */
     z-index: 999;
+        transition: background-color 0.3s ease-in-out;
+
 }
 
 .close-cart-btn:hover {

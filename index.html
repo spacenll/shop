@@ -56,7 +56,7 @@
                 <h4>كوب السيراميك المميز</h4>
                 <p>سعر: 4 ريال</p>
                 <p>هذا المنتج هو الأكثر مبيعًا بفضل جودته وتصميمه الرائع.</p>
-                <button onclick="addToCart(104, 'كوب عصري')">اشترِ الآن</button>
+                <button onclick="addToCart(103, 'كوب عصري')">اشترِ الآن</button>
             </div>
         </div>
     </section>
@@ -89,9 +89,9 @@
         
         <button onclick="showCart()" class="cart-button">عرض السلة</button>
            
-
+     <div id="cart-backdrop" class="cart-backdrop" onclick="closeCart()"></div>
         <div id="cart-modal" class="cart-modal hidden">
-             <div id="cart-backdrop" class="cart-backdrop" onclick="closeCart()"></div>
+        
             <h2>سلة المشتريات</h2>
             <div id="cart-items"></div>
             <p id="cart-total" class="cart-total">المجموع: 0 ريال</p>

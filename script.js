@@ -74,7 +74,7 @@ function showCart() {
 // إغلاق السلة
 function closeCart() {
     const cartModal = document.getElementById('cart-modal');
-    cartModal.classList.add('hidden');
+    cartModal.classList.remove('visible'); 
 }
 function toggleCart() {
     const cartModal = document.getElementById('cart-modal');

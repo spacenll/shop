@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الأكواب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- الشعار -->
+    <header class="logo-section">
+        <h1>متجر الأكواب</h1>
+    </header>
+    <section class="welcome-section">
+        <h2>مرحبًا بك في عالم الأكواب المميزة!</h2>
+        <p>نقدم لك مجموعة مختارة بعناية من الأكواب السيراميك التي تضيف لمسة جمالية إلى يومك.</p>
+    </section>
+    <!-- المنتجات -->
+    <section class="products-section">
+        <h2>منتجاتنا</h2>
+        <div class="products-container">
+            <div class="product" data-id="101">
+                <h4>كوب فاخر</h4>
+                <p>سعر: 50 ريال</p>
+                <button onclick="addToCart(101, 'كوب فاخر')">أضف إلى السلة</button>
+            </div>
+            <div class="product" data-id="102">
+                <h4>كوب كلاسيكي</h4>
+                <p>سعر: 40 ريال</p>
+                <button onclick="addToCart(102, 'كوب كلاسيكي')">أضف إلى السلة</button>
+            </div>
+            <div class="product" data-id="103">
+                <h4>كوب عصري</h4>
+                <p>سعر: 60 ريال</p>
+                <button onclick="addToCart(103, 'كوب عصري')">أضف إلى السلة</button>
+            </div>
+        </div>
+    </section>
+    <section class="top-product-section">
+        <h3>الأكثر طلبًا</h3>
+        <div class="top-product">
+            <img src="top-product.jpg" alt="الأكثر طلبًا">
+            <div class="product-details">
+                <h4>كوب السيراميك المميز</h4>
+                <p>هذا المنتج هو الأكثر مبيعًا بفضل جودته وتصميمه الرائع.</p>
+                <button>اشترِ الآن</button>
+            </div>
+        </div>
+    </section>
+<section class="how-to-order-section">
+        <h3>كيفية الطلب</h3>
+        <div class="steps">
+            <div class="step">
+                <div class="icon">1</div>
+                <p>تحديد المنتج وإضافته إلى السلة</p>
+            </div>
+            <div class="step">
+                <div class="icon">2</div>
+                <p>تأكيد المعلومات الشخصية والعنوان</p>
+            </div>
+            <div class="step">
+                <div class="icon">3</div>
+                <p>الدفع والتدقيق</p>
+            </div>
+            <div class="step">
+                <div class="icon">4</div>
+                <p>شحنتك قادمة إليك</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج الطلب -->
+    <section class="order-form-section">
+        <h2>إرسال الطلب عبر واتساب</h2>
+        <form id="orderForm">
+            <label for="name">الاسم الكامل:</label>
+            <input type="text" id="name" placeholder="أدخل اسمك" required>
+            
+            <label for="address">العنوان:</label>
+            <input type="text" id="address" placeholder="أدخل العنوان" required>
+            
+            <label for="notes">ملاحظات إضافية:</label>
+            <textarea id="notes" placeholder="اكتب أي ملاحظات إضافية"></textarea>
+            
+            <button type="button" onclick="sendWhatsApp()">إرسال عبر واتساب</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

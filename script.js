@@ -46,10 +46,10 @@ function calculateTotal() {
 function showCart() {
     const cartModal = document.getElementById('cart-modal');
     const cartBackdrop = document.getElementById('cart-backdrop');
-    if (cartModal && cartBackdrop) {
+   
         cartModal.classList.add('visible');
         cartBackdrop.classList.add('visible');
-    }
+    
         
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
@@ -88,7 +88,7 @@ function showCart() {
 function closeCart() {
   const cartModal = document.getElementById('cart-modal');
     const cartBackdrop = document.getElementById('cart-backdrop');
-    if (cartModal && cartBackdrop) {
+   
         cartModal.classList.remove('visible');
         cartBackdrop.classList.remove('visible');
 }

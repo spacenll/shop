@@ -9,54 +9,58 @@
 <body>
     <!-- الشعار -->
     <header class="logo-section">
-        <h1>متجر الأكواب</h1>
+        <h1>SIDRA CUP</h1>
     </header>
     <section class="welcome-section">
         <h2>مرحبًا بك في عالم الأكواب المميزة!</h2>
         <p>نقدم لك مجموعة مختارة بعناية من الأكواب السيراميك التي تضيف لمسة جمالية إلى يومك.</p>
     </section>
     <!-- المنتجات -->
-    <section class="products-section">
-        <h2>منتجاتنا</h2>
-        <div class="products-container">
-            <div class="product" data-id="101">
-                <h4>كوب فاخر</h4>
-                <p>سعر: 50 ريال</p>
-                <button onclick="addToCart(101, 'كوب فاخر')">أضف إلى السلة</button>
-            </div>
-            <div class="product" data-id="102">
-                <h4>كوب كلاسيكي</h4>
-                <p>سعر: 40 ريال</p>
-                <button onclick="addToCart(102, 'كوب كلاسيكي')">أضف إلى السلة</button>
-            </div>
-            <div class="product" data-id="103">
-                <h4>كوب عصري</h4>
-                <p>سعر: 60 ريال</p>
-                <button onclick="addToCart(103, 'كوب عصري')">أضف إلى السلة</button>
-            </div>
+   <section class="products-section">
+    <h2>تصفح الاكواب</h2>
+    <div class="products-container">
+        <div class="product" data-id="101">
+            <img src="images/luxury-cup.png" alt="كوب فاخر">
+            <h4>كوب فاخر</h4>
+            <p>سعر: 5 ريال</p>
+            <button onclick="addToCart(101, 'كوب فاخر')">أضف إلى السلة</button>
         </div>
-    </section>
-    <section class="top-product-section">
-        <h3>الأكثر طلبًا</h3>
-        <div class="top-product">
-            <img src="top-product.jpg" alt="الأكثر طلبًا">
-            <div class="product-details">
-                <h4>كوب السيراميك المميز</h4>
-                <p>هذا المنتج هو الأكثر مبيعًا بفضل جودته وتصميمه الرائع.</p>
-                <button>اشترِ الآن</button>
-            </div>
+        <div class="product" data-id="102">
+            <img src="images/classic-cup.png" alt="كوب كلاسيكي">
+            <h4>كوب كلاسيكي</h4>
+            <p>سعر: 4 ريال</p>
+            <button onclick="addToCart(102, 'كوب كلاسيكي')">أضف إلى السلة</button>
         </div>
-    </section>
+        <div class="product" data-id="103">
+            <img src="images/modern-cup.png" alt="كوب عصري">
+            <h4>كوب عصري</h4>
+            <p>سعر: 4 ريال</p>
+            <button onclick="addToCart(103, 'كوب عصري')">أضف إلى السلة</button>
+        </div>
+    </div>
+</section>
+  <section class="top-product-section">
+    <h3>الأكثر طلبًا</h3>
+    <div class="top-product">
+        <img src="images/top-product.png" alt="الأكثر طلبًا">
+        <div class="product-details">
+            <h4>كوب السيراميك المميز</h4>
+            <p>سعر: 4 ريال</p>
+            <p>هذا المنتج هو الأكثر مبيعًا بفضل جودته وتصميمه الرائع.</p>
+            <button>اشترِ الآن</button>
+        </div>
+    </div>
+</section>
 <section class="how-to-order-section">
         <h3>كيفية الطلب</h3>
         <div class="steps">
             <div class="step">
                 <div class="icon">1</div>
-                <p>تحديد المنتج وإضافته إلى السلة</p>
+                <p>إضافة المنتج إلى السلة</p>
             </div>
             <div class="step">
                 <div class="icon">2</div>
-                <p>تأكيد المعلومات الشخصية والعنوان</p>
+                <p>ملئ المعلومات الشخصية والعنوان</p>
             </div>
             <div class="step">
                 <div class="icon">3</div>
@@ -71,7 +75,7 @@
 
     <!-- نموذج الطلب -->
     <section class="order-form-section">
-        <h2>إرسال الطلب عبر واتساب</h2>
+        <h2>ارسل طلبك عبر الواتساب</h2>
         <form id="orderForm">
             <label for="name">الاسم الكامل:</label>
             <input type="text" id="name" placeholder="أدخل اسمك" required>

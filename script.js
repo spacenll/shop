@@ -25,6 +25,7 @@ function scrollToOrderForm() {
     } else {
         console.error("العنصر بالقسم 'order' غير موجود.");
     }
+    closeCart()
 }
 // الحصول على سعر المنتج بناءً على معرف المنتج
 function getProductPrice(productId) {

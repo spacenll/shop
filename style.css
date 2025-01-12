@@ -296,11 +296,7 @@ form button:hover {
         font-size: 14px; /* تحسين حجم أزرار المنتجات */
     }
 
-    .cart-modal {
-        width: 90%;
-        padding: 15px;
-        font-size: 14px; /* تحسين النصوص في نافذة السلة */
-    }
+
 
  
 }
@@ -327,7 +323,7 @@ form button:hover {
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 500px;

@@ -1,12 +1,18 @@
 /* عام */
 body {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'Alexandria', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f4f0;
     color: #5a4638;
     text-align: center;
     line-height: 1.6;
+}
+.alexandria-<uniquifier> {
+  font-family: "Alexandria", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 /* الشعار */

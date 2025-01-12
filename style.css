@@ -48,6 +48,7 @@ body {
 
 .products-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
@@ -58,7 +59,9 @@ body {
     padding: 15px;
     border-radius: 8px;
     width: 250px;
+    text-align: center;
     transition: transform 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .product:hover {
@@ -68,6 +71,7 @@ body {
 .product img {
     width: 100%;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .product h4 {
@@ -82,6 +86,7 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .product button:hover {
@@ -102,22 +107,12 @@ body {
     flex-wrap: wrap;
 }
 
-/* تنسيق صور المنتجات */
-.products-container img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-/* تنسيق صورة المنتج الأكثر طلبًا */
 .top-product img {
     width: 150px;
     height: auto;
-    margin-bottom: 10px;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
-
 
 .product-details {
     max-width: 300px;
@@ -135,6 +130,7 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .product-details button:hover {
@@ -148,9 +144,9 @@ body {
 
 .steps {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .step {
@@ -164,6 +160,7 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 10px;
+    text-align: center;
 }
 
 .step .icon {
@@ -178,6 +175,8 @@ body {
     font-size: 18px;
     margin-bottom: 10px;
 }
+
+/* فورم الطلب */
 form label {
     display: block;
     text-align: right;
@@ -218,6 +217,7 @@ form button:hover {
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 /* حركات Fade لكل قسم */
 .fade-in-section {
     opacity: 0;
@@ -228,60 +228,6 @@ form button:hover {
 .fade-in-section.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* تصميم متجاوب */
-body {
-    margin: 0;
-    font-family: "Arial", sans-serif;
-    background-color: #f8f5f2;
-    color: #5c534f;
-    line-height: 1.6;
-    padding: 0 10px;
-}
-
-header h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 24px;
-}
-
-.products-container, .steps, .cart-modal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* المنتجات */
-.product {
-    width: calc(100% - 20px);
-    max-width: 300px;
-    border: 1px solid #e0dcd7;
-    padding: 15px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.product:hover {
-    transform: scale(1.05);
-}
-
-/* السلة */
-.cart-modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* المجموع */
-.cart-total {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 15px 0;
 }
 
 /* استجابة للأجهزة */
@@ -295,6 +241,7 @@ header h1 {
     }
 
     .product {
+        width: 100%;
         padding: 10px;
     }
 

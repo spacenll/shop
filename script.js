@@ -24,7 +24,7 @@ function scrollToOrderForm() {
     if (orderFormSection) {
         orderFormSection.scrollIntoView({ behavior: 'smooth' });
     } else {
-        console.error("العنصر بالقسم 'order' غير موجود.");
+        console.error("'order' للأسف , نفذت الكمية");
     }
     closeCart()
 }

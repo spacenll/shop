@@ -6,7 +6,7 @@ let cart = [];
 function addToCart(productId, productName) {
     const productPrice = getProductPrice(productId); // الحصول على السعر بناءً على المنتج
     if (productPrice <= 0) {
-        alert('حدث خطأ أثناء إضافة المنتج. يرجى المحاولة لاحقًا.');
+        alert('للاسف نفذت الكمية من هذا المنتج');
         return;
     }
     const productExists = cart.find(item => item.id === productId);

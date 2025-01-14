@@ -46,11 +46,9 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 
 /* العنوان الترحيبي */
 .welcome-section {
-   display: inline-block;
+  
     background-color: #f0ebe4;
     padding: 30px 20px;
-                border-radius: 20px;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 

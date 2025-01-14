@@ -1,9 +1,7 @@
 // متغير لتخزين تفاصيل السلة
 let cart = [];
 
-  document.querySelectorAll('.typing').forEach((el, index) => {
-            el.style.animation = `typing ${3 + index}s steps(40, end), blink 0.5s step-end infinite alternate`;
-        });
+
 // إضافة المنتج إلى السلة
 function addToCart(productId, productName) {
     const productPrice = getProductPrice(productId); // الحصول على السعر بناءً على المنتج

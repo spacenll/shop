@@ -17,6 +17,11 @@ body {
 h1, h2, h3, h4, h5, h6, p, button, input, textarea {
     font-family: 'Alexandria', sans-serif;
 }
+
+.a {
+    font-size: 13px;
+    color: grey;
+}
 .go-to-order-btn {
     background-color: #ff5722;
     color: white;

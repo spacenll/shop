@@ -172,6 +172,7 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+        bottom: 45px;
     transition: background-color 0.3s;
 }
 

@@ -33,16 +33,36 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
     background-color: #e53935;
 }
 /* الشعار */
-.logo-section {
-    background-color: #ffffff;
-    padding: 20px 0;
-    border-bottom: 2px solid #e0dcd7;
-}
+  .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff6f61;
+            padding: 20px;
+            color: white;
+        }
 
-.logo-section h1 {
-    font-size: 24px;
-    font-weight: bold;
-}
+        .logo-section img {
+            max-width: 120px; /* حجم افتراضي للصورة */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .logo-section h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .logo-section img {
+                max-width: 80px; /* تصغير الشعار للشاشات الصغيرة */
+            }
+
+            .logo-section h1 {
+                font-size: 20px;
+            }
+        }
 
 /* العنوان الترحيبي */
 .welcome-section {

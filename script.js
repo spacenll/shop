@@ -1,6 +1,15 @@
 // متغير لتخزين تفاصيل السلة
 let cart = [];
 
+    // JavaScript to handle the loading screen
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        // Hide the loading screen
+        document.getElementById('loading-screen').style.display = 'none';
+        // Show the main content
+        document.getElementById('main-content').style.display = 'block';
+      }, 1500); // 1.5 seconds
+    });
 
 // إضافة المنتج إلى السلة
 function addToCart(productId, productName) {

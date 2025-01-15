@@ -127,7 +127,21 @@
             
             <label for="address">العنوان:</label>
             <input type="text" id="address" placeholder="أدخل العنوان" required>
-            
+               <label for="region">المنطقة:</label>
+    <select id="region" onchange="updateDeliveryOptions()" required>
+        <option value="">اختر منطقة التوصيل</option>
+        <option value="السعادة">السعادة</option>
+        <option value="صلالة">صلالة</option>
+        <option value="عوقد">عوقد</option>
+        <option value="صحلنوت">صحلنوت</option>
+        <option value="مسقط">مسقط</option>
+        <option value="اخرى">أخرى</option>
+    </select>
+
+    <label for="delivery">التوصيل:</label>
+    <select id="delivery" required>
+        <option value="">اختر طريقة التوصيل</option>
+    </select>
             <label for="notes">ملاحظات إضافية:</label>
             <textarea id="notes" placeholder="اكتب أي ملاحظات إضافية"></textarea>
             

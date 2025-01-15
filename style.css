@@ -112,12 +112,12 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
             align-items: center;
             justify-content: center;
             background-color: #86654a;
-            padding: 20px;
+           
             color: #f8f4f0;
         }
 
         .logo-section img {
-            width: 80%; /* حجم افتراضي للصورة */
+            width: 100%; /* حجم افتراضي للصورة */
             height: auto;
         
         }

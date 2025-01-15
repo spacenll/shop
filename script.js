@@ -89,9 +89,9 @@ function showCart() {
     }
 
     const deliveryCost = getDeliveryCost();
-    cartTotal.textContent = `المجموع الكلي: ${calculateTotal(true, deliveryCost)} ريال`;
+    productTotal.textContent = `المجموع الكلي: ${calculateTotal(true, deliveryCost)} ريال`;
     delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
-    productTotal.textContent = `المجموع: ${productsTotal} ريال`;
+    cartTotal.textContent = `المجموع: ${productsTotal} ريال`;
     cartModal.classList.add('visible');
     cartBackdrop.classList.add('visible');
 }

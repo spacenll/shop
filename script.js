@@ -185,7 +185,7 @@ function sendWhatsApp() {
 
    
     const productsMessage = cart.map(item => `- ${item.name} (الكمية: ${item.quantity}, السعر الإجمالي: ${item.price * item.quantity} ريال)`).join('\n');
-    const total = calculateTotal();
+ 
     const message = 
         `مرحبا، أريد تقديم طلب:\n` +
         `الاسم: ${name}\n` +

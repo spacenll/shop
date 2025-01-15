@@ -65,7 +65,8 @@ function showCart() {
     const cartBackdrop = document.getElementById('cart-backdrop');
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
-
+   const delivery = document.getElementById('delivery-cost');
+    
     cartItems.innerHTML = '';
 
     if (cart.length === 0) {
@@ -88,7 +89,8 @@ function showCart() {
 
     const deliveryCost = getDeliveryCost();
     cartTotal.textContent = `المجموع: ${calculateTotal(true, deliveryCost)} ريال`;
-
+delivery.textContent =deliveryCost;
+    
     cartModal.classList.add('visible');
     cartBackdrop.classList.add('visible');
 }

@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
             mainContent.style.display = 'block';
             mainContent.classList.add('visible');
         }, 800); 
-    }, 1500); 
+    }, 1000); 
 });
 
 // إضافة المنتج إلى السلة

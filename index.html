@@ -124,9 +124,6 @@
         <form id="orderForm">
             <label for="name">الاسم الكامل:</label>
             <input type="text" id="name" placeholder="أدخل اسمك" required>
-            
-            <label for="address">العنوان:</label>
-            <input type="text" id="address" placeholder="أدخل العنوان" required>
                <label for="region">المنطقة:</label>
     <select id="region" onchange="updateDeliveryOptions()" required>
         <option value="">اختر منطقة التوصيل</option>
@@ -137,7 +134,8 @@
         <option value="مسقط">مسقط</option>
         <option value="اخرى">أخرى</option>
     </select>
-
+ <label for="address">العنوان:</label>
+            <input type="text" id="address" placeholder="مثال : الخوض السادسة" required>
     <label for="delivery">التوصيل:</label>
     <select id="delivery" required>
         <option value="">اختر طريقة التوصيل</option>
@@ -149,10 +147,11 @@
         </label>
     </div>
             <label for="notes">ملاحظات إضافية:</label>
-            <textarea id="notes" placeholder="اكتب أي ملاحظات إضافية"></textarea>
+            <textarea id="notes" placeholder="حاب تضيف اي شي ؟ "></textarea>
             
             <button type="button" onclick="sendWhatsApp()">إرسال</button>
-            <p>سيتم توجيهك الى الواتساب مع رسالة المنتجات, يرجى ارسال الرسالة, وسوف يتم التواصل معك قريباً بإذن الله</p>
+            <p>
+عند النقر على 'إرسال'، سيتم توجيهك إلى واتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك فريقنا قريبًا لإرسال الفاتورة الخاصة بك لدفعها بإذن الله.</p>
         </form>
     </section>
 <div class="copyright">

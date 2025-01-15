@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
         }
 
         .logo-section img {
-            width: 100%; /* حجم افتراضي للصورة */
+            width: 80%; /* حجم افتراضي للصورة */
             height: auto;
         
         }
@@ -127,15 +127,7 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
             margin: 0;
         }
 
-        @media (max-width: 768px) {
-            .logo-section img {
-                max-width: 80px; /* تصغير الشعار للشاشات الصغيرة */
-            }
-
-            .logo-section h1 {
-                font-size: 20px;
-            }
-        }
+      
 
 /* العنوان الترحيبي */
 .welcome-section {

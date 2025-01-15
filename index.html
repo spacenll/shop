@@ -36,62 +36,49 @@
     </section>
 
     <!-- المنتجات -->
-  <section class="products-section fade-in-section">
-    <h2>المتوفر حالياً</h2>
-    <br>
-    <div class="slider-container">
-        <div class="slider">
-            <!-- المنتجات -->
+    <section class="products-section fade-in-section">
+        <!--- <h2>المتوفر حالياً</h2> -->
+        <br>
+        <div class="products-container">
             <div class="product" data-id="101">
-                <img src="images/product1.jpg" alt="منتج 1">
-                <h4>منتج 1</h4>
-                <div class="class-a">وصف المنتج 1</div>
-                <div class="product-price">5 ريال</div>
-                <button onclick="addToCart(101, 'منتج 1')">أضف إلى السلة <i class="fa-solid fa-cart-shopping"></i></button>
+                <img src="images/classic-cup.png" alt="صورة كوب فاخر">
+                   <h4>كوب فاخر</h4>
+                 <div class="class-a">كوب، أزرق، هادئ، أنيق، مائي</div>
+                <div class="product-price" >5 ريال  </div>
+                     
+                <button onclick="addToCart(101, 'كوب فاخر')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
-            <div class="product" data-id="102">
-                <img src="images/product2.jpg" alt="منتج 2">
-                <h4>منتج 2</h4>
-                <div class="class-a">وصف المنتج 2</div>
-                <div class="product-price">6 ريال</div>
-                <button onclick="addToCart(102, 'منتج 2')">أضف إلى السلة <i class="fa-solid fa-cart-shopping"></i></button>
+            <div class="product" data-id="102"style="opacity: 50%;  border: 4px dotted #91746b;">
+                <img src="images/classic-cup.png" alt="صورة كوب كلاسيكي">
+                 <h4>كوب كلاسيكي</h4>
+                             <div class="class-a">كوب، أزرق، هادئ، أنيق، مائي</div>
+              <div class="product-price" >5 ريال  </div>
+                <button onclick="addToCart(105, 'غير متوفر حاليا')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
             <div class="product" data-id="103">
-                <img src="images/product3.jpg" alt="منتج 3">
-                <h4>منتج 3</h4>
-                <div class="class-a">وصف المنتج 3</div>
-                <div class="product-price">7 ريال</div>
-                <button onclick="addToCart(103, 'منتج 3')">أضف إلى السلة <i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-            <div class="product" data-id="104">
-                <img src="images/product4.jpg" alt="منتج 4">
-                <h4>منتج 4</h4>
-                <div class="class-a">وصف المنتج 4</div>
-                <div class="product-price">8 ريال</div>
-                <button onclick="addToCart(104, 'منتج 4')">أضف إلى السلة <i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-            <div class="product" data-id="105">
-                <img src="images/product5.jpg" alt="منتج 5">
-                <h4>منتج 5</h4>
-                <div class="class-a">وصف المنتج 5</div>
-                <div class="product-price">9 ريال</div>
-                <button onclick="addToCart(105, 'منتج 5')">أضف إلى السلة <i class="fa-solid fa-cart-shopping"></i></button>
-            </div>
-            <div class="product" data-id="106">
-                <img src="images/product6.jpg" alt="منتج 6">
-                <h4>منتج 6</h4>
-                <div class="class-a">وصف المنتج 6</div>
-                <div class="product-price">10 ريال</div>
-                <button onclick="addToCart(106, 'منتج 6')">أضف إلى السلة <i class="fa-solid fa-cart-shopping"></i></button>
+                <img src="images/classic-cup.png" alt="صورة كوب عصري">
+                 <h4>كوب عصري</h4>
+                      <div class="class-a">كوب، أزرق، هادئ، أنيق، مائي</div>
+            <div class="product-price" >5 ريال  </div>
+                <button onclick="addToCart(103, 'كوب عصري')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </div>
-        <!-- أزرار التنقل -->
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-</section>
+    </section>
 
-     
+    <!-- المنتج الأكثر طلبًا -->
+    <section class="top-product-section fade-in-section">
+     <div class="top-product">
+               <h3 class="bestseller-label">الأكثر مبيعاً !</h3>
+               <img src="images/classic-cup.png" alt="صورة كوب السيراميك المميز">
+            <div class="product-details">
+                <h4>كوب السيراميك المميز</h4>
+                  <p>هذا المنتج هو الأكثر مبيعًا بفضل جودته وتصميمه الرائع.</p>
+                 <p>5 ريال  </p>
+                <button onclick="addToCart(103, 'كوب عصري')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+
     <!-- كيفية الطلب -->
     <section class="how-to-order-section fade-in-section">
         <h3>كيفية الطلب</h3>

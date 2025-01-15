@@ -522,7 +522,7 @@ form button:hover {
     padding: 50px 100px;
     font-style: italic;
     font-weight: bold;
-    z-index: 2;
+    z-index: -1;
     font-size: 70px;
     border-radius: 200px;
     border-top: 2px dashed;

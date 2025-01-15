@@ -23,7 +23,7 @@ body {
   svg {
             width: 25px;
             height: 25px;
-            fill: #f8f4f0; /* Green color */
+            fill: #e53935; /* Green color */
         }
 
   /* Loading screen styles */

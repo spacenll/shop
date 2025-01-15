@@ -189,22 +189,21 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 }
 
 .products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+        gap: 20px; /* المسافة بين المنتجات */
+        overflow-x: auto; /* لإضافة شريط تمرير أفقي */
+        padding: 20px;
+        scroll-snap-type: x mandatory; /* لضمان الالتقاط عند التمرير */
 }
 
 .product {
-    background-color: #ffffff;
-    border: 1px solid #e0dcd7;
-    padding: 15px;
-    border-radius: 20px;
-    width: 250px;
-    margin: 10px;
-    text-align: center;
-    transition: transform 0.3s;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start; /* ضبط محاذاة المنتج مع بداية العرض */
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .product:hover {
@@ -212,9 +211,9 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 }
 
 .product img {
-    width: 100%;
-    border-radius: 8px;
-
+     width: 100%; /* جعل الصور تستجيب للمساحة */
+        max-height: 150px;
+        object-fit: contain;
 }
 
 .product h4 {

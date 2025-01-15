@@ -25,7 +25,20 @@ body {
             height: 25px;
             fill: #86654a; /* Green color */
         }
+    /* Cup icon */
+    #loading-screen .cup-icon {
+      width: 100px;
+      height:100px;
+      background: url('images/loading.png') no-repeat center;
+      background-size: contain;
+    
+    }
 
+    /* Spin animation */
+
+  #main-content.visible {
+      opacity: 1;
+    }
   /* Loading screen styles */
     #loading-screen {
       display: flex;
@@ -41,20 +54,7 @@ body {
             transition: opacity 1.2s ease;
     }
 
-    /* Cup icon */
-    #loading-screen .cup-icon {
-      width: 100px;
-      height:100px;
-      background: url('images/loading.png') no-repeat center;
-      background-size: contain;
-    
-    }
 
-    /* Spin animation */
-
-  #main-content.visible {
-      opacity: 1;
-    }
 
 h1, h2, h3, h4, h5, h6, p, button, input, textarea {
     font-family: 'Aref Ruqaa', sans-serif;

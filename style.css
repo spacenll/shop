@@ -1,6 +1,6 @@
 /* عام */
 body {
-    font-family: 'Alexandria', sans-serif; /* الخط الأساسي */
+    font-family: 'Aref Ruqaa', sans-serif; /* الخط الأساسي */
     margin: 0;
     padding: 0;
     background-color: #f8f4f0;
@@ -8,14 +8,20 @@ body {
     text-align: center;
     line-height: 1.6;
 }
-.alexandria-<uniquifier> {
-  font-family: "Alexandria", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
+.aref-ruqaa-regular {
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 400;
   font-style: normal;
 }
+
+.aref-ruqaa-bold {
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 h1, h2, h3, h4, h5, h6, p, button, input, textarea {
-    font-family: 'Alexandria', sans-serif;
+    font-family: 'Aref Ruqaa', sans-serif;
 }
 
 .class-a {
@@ -169,7 +175,7 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
         z-index: 8;
     background-color: #a38264;
     color: #ffffff;
-    font-family: 'Alexandria', sans-serif;
+    font-family: 'Aref Ruqaa', sans-serif;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -214,7 +220,7 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 
 .product-details button {
     background-color: #a38264;
-        font-family: 'Alexandria', sans-serif;
+        font-family: 'Aref Ruqaa', sans-serif;
     color: #ffffff;
     border: none;
     padding: 10px 15px;
@@ -320,7 +326,7 @@ form button:hover {
     transform: translateY(0);
 }
 .cart-button {
-       font-family: 'Alexandria';
+       font-family: 'Aref Ruqaa';
     position: fixed;
     bottom: 20px;
     right: 20px;

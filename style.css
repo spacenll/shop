@@ -235,10 +235,8 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 
 .top-product {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-direction: row-reverse; /* عكس ترتيب العناصر */
+    align-items: center; /* توسيط العناصر عموديًا */
 }
 
 .top-product img {
@@ -249,7 +247,8 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 }
 
 .product-details {
-    max-width: 300px;
+   text-align: left; /* جعل النص محاذيًا لليسار */
+    margin-left: 20px; /* إضافة فراغ بين الصورة والمحتوى */
 }
 
 .product-details h4 {

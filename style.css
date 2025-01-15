@@ -501,16 +501,15 @@ form button:hover {
 
 /* جعل كلمة "الأكثر طلبًا" مائلة وموضوعة على اليمين */
 .bestseller-label {
-    position: absolute; /* تحديد الموقع بشكل حر */
-    right: -40px; /* ضبط المسافة من اليمين */
-    top: 50%; /* منتصف الصفحة عموديًا */
-    transform: rotate(90deg) translateY(-50%); /* التدوير وتحريك النص */
-    background-color: #d2b48c; /* لون بني خلف النص */
-    color: #fff; /* لون النص */
-    padding: 5px 10px; /* مساحة داخلية للنص */
-    font-style: italic; /* جعل الخط مائل */
-    font-weight: bold; /* خط عريض */
-    z-index: 10; /* جعله فوق العناصر الأخرى */
-    border-radius: 5px; /* زوايا مستديرة */
+    position: absolute;
+    color: #a38264;
+    right: 1px;
+    padding: 2px 30px;
+    font-style: italic;
+    font-weight: bold;
+    z-index: 10;
+    font-size: 20px;
+    border-radius: 20px;
+    border-bottom: 2px dashed;
 }
 

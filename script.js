@@ -89,6 +89,8 @@ function showCart() {
     }
 
     const deliveryCost = getDeliveryCost();
+    const productsTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0); // إجمالي المنتجات
+
     productTotal.textContent = `المجموع الكلي: ${calculateTotal(true, deliveryCost)} ريال`;
     delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
     cartTotal.textContent = `المجموع: ${productsTotal} ريال`;

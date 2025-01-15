@@ -501,10 +501,8 @@ form button:hover {
 
 /* جعل كلمة "الأكثر طلبًا" مائلة وموضوعة على اليمين */
 .bestseller-label {
-    position: absolute;
-    color: #a38264;
-    right: 1px;
-    padding: 2px 30px;
+     color: #a38264;
+    padding: 10px 30px;
     font-style: italic;
     font-weight: bold;
     z-index: 10;

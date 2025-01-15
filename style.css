@@ -20,6 +20,11 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+  svg {
+            width: 25px;
+            height: 25px;
+            fill: #f8f4f0; /* Green color */
+        }
 
   /* Loading screen styles */
     #loading-screen {

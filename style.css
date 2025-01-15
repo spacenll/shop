@@ -332,6 +332,7 @@ form input, form textarea, form button,  form select, form select option {
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #e0dcd7;
+    font-family: 'Aref Ruqaa';
     border-radius: 20px;
     font-size: 16px;
 }

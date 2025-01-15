@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 }
 
 .product-details {
-   text-align: right; /* جعل النص محاذيًا لليسار */
+   text-align: center; /* جعل النص محاذيًا لليسار */
     margin-left: 20px; /* إضافة فراغ بين الصورة والمحتوى */
 }
 

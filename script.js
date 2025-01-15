@@ -182,8 +182,7 @@ function sendWhatsApp() {
         alert('سلتك فارغة! يرجى إضافة منتجات.');
         return;
     }
-    const deliveryCost = getDeliveryCost();
-    const total = calculateTotal(includeDelivery, deliveryCost);
+
    
     const productsMessage = cart.map(item => `- ${item.name} (الكمية: ${item.quantity}, السعر الإجمالي: ${item.price * item.quantity} ريال)`).join('\n');
     const total = calculateTotal();

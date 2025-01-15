@@ -1,24 +1,6 @@
 // متغير لتخزين تفاصيل السلة
 let cart = [];
-let currentSlide = 0;
 
-function moveSlide(direction) {
-    const slider = document.querySelector('.slider');
-    const totalSlides = slider.children.length;
-
-    currentSlide += direction;
-
-    // التحقق من الحدود
-    if (currentSlide < 0) {
-        currentSlide = totalSlides - 3; // عند الرجوع للخلف
-    } else if (currentSlide > totalSlides - 3) {
-        currentSlide = 0; // عند التقدم للأمام
-    }
-
-    // نقل السلايدر
-    const slideWidth = slider.children[0].offsetWidth;
-    slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-}
 // تأثير التحميل والظهور التدريجي
 window.addEventListener('load', function () {
     setTimeout(function () {

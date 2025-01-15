@@ -65,6 +65,7 @@ function showCart() {
     const cartBackdrop = document.getElementById('cart-backdrop');
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
+    const productTotal = document.getElementById('product-total');
    const delivery = document.getElementById('delivery-cost');
     
     cartItems.innerHTML = '';
@@ -88,9 +89,9 @@ function showCart() {
     }
 
     const deliveryCost = getDeliveryCost();
-    cartTotal.textContent = `المجموع: ${calculateTotal(true, deliveryCost)} ريال`;
+    cartTotal.textContent = `المجموع الكلي: ${calculateTotal(true, deliveryCost)} ريال`;
     delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
-    
+    productTotal.textContent = `المجموع: ${productsTotal} ريال`;
     cartModal.classList.add('visible');
     cartBackdrop.classList.add('visible');
 }

@@ -89,7 +89,7 @@ function showCart() {
 
     const deliveryCost = getDeliveryCost();
     cartTotal.textContent = `المجموع: ${calculateTotal(true, deliveryCost)} ريال`;
-    delivery.textContent = deliveryCost();
+    delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
     
     cartModal.classList.add('visible');
     cartBackdrop.classList.add('visible');

@@ -501,13 +501,16 @@ form button:hover {
 
 /* جعل كلمة "الأكثر طلبًا" مائلة وموضوعة على اليمين */
 .bestseller-label {
-     color: #a38264;
-    padding: 10px 30px;
+    opacity: 10%;
+    color: #a38264;
+    bottom: -200px;
+    position: absolute;
+    padding: 50px 100px;
     font-style: italic;
     font-weight: bold;
-    z-index: 10;
-    font-size: 20px;
-    border-radius: 20px;
-    border-bottom: 2px dashed;
+    z-index: 2;
+    font-size: 200px;
+    border-radius: 200px;
+    border: 2px dashed;
 }
 

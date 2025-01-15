@@ -72,7 +72,7 @@ function showCart() {
     
         
     const cartItems = document.getElementById('cart-items');
-    const cartTotal = document.getElementById('cart-total');
+   
 
     // تفريغ المحتوى القديم
     cartItems.innerHTML = '';

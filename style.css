@@ -471,7 +471,7 @@ form button:hover {
 .cart-item button {
     margin: 5px;
     padding: 5px 10px;
-    background-color: #f44336;
+    background-color: #a38264;
     color: white;
     border: none;
     border-radius: 5px;
@@ -485,7 +485,7 @@ form button:hover {
 .close-cart-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ff5722;
+    background-color: #a38264;
     color: white;
     border: none;
     border-radius: 5px;

@@ -131,12 +131,19 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
             .logo-section img {
                 max-width: 80px; /* تصغير الشعار للشاشات الصغيرة */
             }
+              .products-container {
+            grid-template-columns: repeat(2, 1fr); /* صفين في الشاشات المتوسطة */
+        }
 
             .logo-section h1 {
                 font-size: 20px;
             }
         }
-
+   @media (max-width: 480px) {
+        .products-container {
+            grid-template-columns: 1fr; /* منتج واحد في الصف في الشاشات الصغيرة */
+        }
+    }
 /* العنوان الترحيبي */
 .welcome-section {
   
@@ -190,16 +197,13 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 
 .products-container {
     display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+        grid-template-columns: repeat(3, 1fr); /* 3 أعمدة افتراضيًا */
         gap: 20px; /* المسافة بين المنتجات */
-        overflow-x: auto; /* لإضافة شريط تمرير أفقي */
         padding: 20px;
-        scroll-snap-type: x mandatory; /* لضمان الالتقاط عند التمرير */
 }
 
 .product {
-    scroll-snap-align: start; /* ضبط محاذاة المنتج مع بداية العرض */
-        background-color: #f8f8f8;
+     background-color: #f8f8f8;
         border-radius: 10px;
         text-align: center;
         padding: 20px;
@@ -207,11 +211,11 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 }
 
 .product:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .product img {
-     width: 100%; /* جعل الصور تستجيب للمساحة */
+       width: 100%;
         max-height: 150px;
         object-fit: contain;
 }

@@ -137,13 +137,35 @@ function removeFromCart(index) {
     showCart();
 }
 
+  function updateDeliveryOptions() {
+        const region = document.getElementById("region").value;
+        const delivery = document.getElementById("delivery");
+
+        delivery.innerHTML = ""; // تفريغ الخيارات السابقة
+
+        if (region === "السعادة") {
+            delivery.innerHTML = `<option value="مندوب - 1 ريال">مندوب - 1 ريال</option>`;
+        } else if (region === "صلالة" || region === "عوقد" || region === "صحلنوت") {
+            delivery.innerHTML = `<option value="مندوب - 1.5 ريال">مندوب - 1.5 ريال</option>`;
+        } else if (region === "مسقط" || region === "اخرى") {
+            delivery.innerHTML = `
+                <option value="نقليات - 1 ريال">نقليات - 1 ريال</option>
+                <option value="مندوب إلى الباب - 2 ريال">مندوب إلى الباب - 2 ريال</option>
+            `;
+        } else {
+            delivery.innerHTML = `<option value="">اختر طريقة التوصيل</option>`;
+        }
+    }
+
 // إرسال الطلب عبر واتساب
 function sendWhatsApp() {
     const name = document.getElementById('name').value.trim();
     const address = document.getElementById('address').value.trim();
+    const region = document.getElementById("region").value;
+        const delivery = document.getElementById("delivery").value;
     const notes = document.getElementById('notes').value.trim();
 
-    if (!name || !address) {
+    if (!name || !address || !region || !delivery) {
         alert('يرجى ملء جميع الحقول المطلوبة!');
         return;
     }
@@ -158,8 +180,10 @@ function sendWhatsApp() {
         `مرحبا، أريد تقديم طلب:\n` +
         `الاسم: ${name}\n` +
         `العنوان: ${address}\n` +
+       `المنطقة: ${region} \n` +
+`التوصيل: ${delivery}\n` +
         `المنتجات:\n${productsMessage}\n` +
-        `المجموع الإجمالي: ${total} ريال\n` +
+        `المجموع: ${total} ريال\n` +
         `ملاحظات إضافية: ${notes || 'لا توجد ملاحظات'}\n`;
 
     const phone = '+96877267075'; // رقم الواتساب

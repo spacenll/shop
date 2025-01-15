@@ -9,14 +9,14 @@ body {
     line-height: 1.6;
 }
 
-.aref-ruqaa-regular {
-  font-family: "Aref Ruqaa", serif;
+.aref-ruqaa-ink-regular {
+  font-family: "Aref Ruqaa Ink", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.aref-ruqaa-bold {
-  font-family: "Aref Ruqaa", serif;
+.aref-ruqaa-ink-bold {
+  font-family: "Aref Ruqaa Ink", serif;
   font-weight: 700;
   font-style: normal;
 }

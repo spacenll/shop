@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 
 .top-product {
     display: flex;
-    flex-direction: row-reverse; /* عكس ترتيب العناصر */
+    flex-direction: column; /* عكس ترتيب العناصر */
     align-items: center; /* توسيط العناصر عموديًا */
 }
 

@@ -1,14 +1,22 @@
 // متغير لتخزين تفاصيل السلة
 let cart = [];
 
-    // JavaScript to handle the loading screen
+   // JavaScript to handle the loading screen and fade effects
     window.addEventListener('load', function () {
       setTimeout(function () {
-        // Hide the loading screen
-        document.getElementById('loading-screen').style.display = 'none';
-        // Show the main content
-        document.getElementById('main-content').style.display = 'block';
-      }, 1500); // 1.5 seconds
+        // Fade out the loading screen
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.style.opacity = '0';
+
+        // Wait for the fade-out transition to complete
+        setTimeout(function () {
+          loadingScreen.style.display = 'none';
+          // Show the main content with a fade-in effect
+          const mainContent = document.getElementById('main-content');
+          mainContent.style.display = 'block';
+          mainContent.classList.add('visible');
+        }, 800); // Matches the fade-out transition duration
+      }, 1500); // 1.5 seconds before fading starts
     });
 
 // إضافة المنتج إلى السلة

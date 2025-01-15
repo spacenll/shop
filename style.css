@@ -67,18 +67,12 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
     color: grey;
 }
 .form-group {
-    margin: 15px 0;
-    font-size: 16px;
     display: flex;
     align-items: center;
 }
 
-.form-group label {
-    cursor: pointer;
-}
-
 .form-group input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 10px; /* مسافة بين المربع والنص */
 }
 .product-price{
         background: #f8f4f0;

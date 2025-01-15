@@ -48,16 +48,18 @@ function scrollToOrderForm() {
 // الحصول على سعر المنتج بناءً على معرف المنتج
 function getProductPrice(productId) {
     const prices = {
-        101: 5, // سعر كوب فاخر
-        102: 4, // سعر كوب كلاسيكي
-        103: 4  // سعر كوب عصري
+        101: { name: "كوب فاخر", price: 5 },
+        102: { name: "كوب كلاسيكي", price: 4 },
+        103: { name: "كوب عصري", price: 4 },
+        104: { name: "دفتر ملاحظات", price: 3 } // منتج جديد كمثال
     };
-    return prices[productId] || 0;
+    return prices[productId] || { name: "غير معروف", price: 0 };
 }
 
 // حساب المجموع الإجمالي
-function calculateTotal() {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+function calculateTotal(includeDelivery = false, deliveryCost = 0) {
+    const productsTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    return includeDelivery ? productsTotal + deliveryCost : productsTotal;
 }
 
 // عرض السلة
@@ -100,6 +102,12 @@ function showCart() {
 
     // عرض النافذة
     cartModal.classList.remove('hidden');
+}
+
+function getDeliveryCost() {
+    const deliverySelect = document.getElementById("delivery");
+    const selectedOption = deliverySelect.options[deliverySelect.selectedIndex];
+    return parseFloat(selectedOption.value) || 0;
 }
 
 // إغلاق السلة
@@ -164,7 +172,8 @@ function sendWhatsApp() {
     const region = document.getElementById("region").value;
         const delivery = document.getElementById("delivery").value;
     const notes = document.getElementById('notes').value.trim();
-
+    const deliveryCost = getDeliveryCost();
+    const total = calculateTotal(includeDelivery, deliveryCost);
     if (!name || !address || !region || !delivery) {
         alert('يرجى ملء جميع الحقول المطلوبة!');
         return;
@@ -173,7 +182,9 @@ function sendWhatsApp() {
         alert('سلتك فارغة! يرجى إضافة منتجات.');
         return;
     }
-
+    const deliveryCost = getDeliveryCost();
+    const total = calculateTotal(includeDelivery, deliveryCost);
+   
     const productsMessage = cart.map(item => `- ${item.name} (الكمية: ${item.quantity}, السعر الإجمالي: ${item.price * item.quantity} ريال)`).join('\n');
     const total = calculateTotal();
     const message = 

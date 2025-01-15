@@ -499,3 +499,19 @@ form button:hover {
 .cart-backdrop.visible {
     display: block;
 }
+
+/* جعل كلمة "الأكثر طلبًا" مائلة وموضوعة على اليمين */
+.bestseller-label {
+    position: absolute; /* تحديد الموقع بشكل حر */
+    right: -40px; /* ضبط المسافة من اليمين */
+    top: 50%; /* منتصف الصفحة عموديًا */
+    transform: rotate(90deg) translateY(-50%); /* التدوير وتحريك النص */
+    background-color: #d2b48c; /* لون بني خلف النص */
+    color: #fff; /* لون النص */
+    padding: 5px 10px; /* مساحة داخلية للنص */
+    font-style: italic; /* جعل الخط مائل */
+    font-weight: bold; /* خط عريض */
+    z-index: 10; /* جعله فوق العناصر الأخرى */
+    border-radius: 5px; /* زوايا مستديرة */
+}
+

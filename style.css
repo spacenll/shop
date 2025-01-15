@@ -33,6 +33,7 @@ body {
       height: 100%;
       background-color: #ffffff;
       z-index: 9999;
+            transition: opacity 0.8s ease;
     }
 
     /* Cup icon */
@@ -52,6 +53,9 @@ body {
       100% {
         transform: rotate(360deg);
       }
+    }
+  #main-content.visible {
+      opacity: 1;
     }
 
 h1, h2, h3, h4, h5, h6, p, button, input, textarea {

@@ -58,7 +58,7 @@ body {
       opacity: 1;
     }
 
-h1, h2, h3, h4, h5, h6, p, button, input, textarea {
+h1, h2, h3, h4, h5, h6, p, button, input, textarea, select {
     font-family: 'Aref Ruqaa', sans-serif;
 }
 

@@ -31,15 +31,24 @@ function addToCart(productId, productName) {
     }
 
     alert(`${productName} تمت إضافته إلى السلة.`);
+    updateCartTotal();
 }
 
+function updateCartTotal() {
+    const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const cartTotalElement = document.getElementById('total-cart');
+    
+    if (cartTotalElement) {
+        cartTotalElement.textContent = `${total} ريال`;
+    }
+}
 // التمرير إلى نموذج الطلب
 function scrollToOrderForm() {
     const orderFormSection = document.getElementById('order');
     if (orderFormSection) {
         orderFormSection.scrollIntoView({ behavior: 'smooth' });
     }
-    closeCart();
+closeCart();
 }
 
 // الحصول على سعر المنتج
@@ -93,7 +102,7 @@ function showCart() {
 
     productTotal.textContent = `المجموع الكلي: ${calculateTotal(true, deliveryCost)} ريال`;
     delivery.textContent = `تكلفة التوصيل: ${deliveryCost} ريال`;
-    cartTotal.textContent = `المجموع: ${productsTotal} ريال`;
+    cartTotal.textContent = `${productsTotal} ريال`;
     cartModal.classList.add('visible');
     cartBackdrop.classList.add('visible');
 }

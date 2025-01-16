@@ -19,12 +19,24 @@
       <!-- Loading screen -->
   <div id="loading-screen">
     <div class="cup-icon"></div>
+      
   </div>
      
     <!-- الشعار -->
-    <header class="logo-section fade-in-section">
-                 <img src="images/logo.jpg" alt="شعار الموقع">
-       
+    <header >
+        <div class="bannar-section">
+            <div class="logo-section fade-in-section">
+                 <img src="images/logo.png" alt="شعار الموقع">
+      <div class="cart-menu" onclick="showCart()">
+          <i class="astra-icon ast-icon-shopping-basket" >
+    <i class="fa-solid fa-cart-shopping"></i>
+  </i>
+ <p id="total-cart" class="cart-total" style="margin-right: 10px; font-size: 16px; font-weight: bold;">0 ريال</p>
+  <!-- أيقونة السلة -->
+  
+            </div>
+          </div>
+            </div>
     </header>
 
     <!-- القسم الترحيبي -->
@@ -105,7 +117,7 @@
     <!-- السلة -->
     <section class="cart-section">
         
-        <button onclick="showCart()" class="cart-button">  <i class="fa-solid fa-cart-shopping"></i></button>
+     
            
      <div id="cart-backdrop" class="cart-backdrop" onclick="closeCart()"></div>
         <div id="cart-modal" class="cart-modal hidden">
@@ -113,7 +125,6 @@
             <h2>سلة المشتريات</h2>
             <div id="cart-items"></div>
                <div style="border: .5px #bdbdbd dashed;"> </div>
-                          <br>
           <p id="cart-total" class="cart-total">المجموع الكلي: 0 ريال</p>
                 <p id="delivery-cost" class="cart-total">-</p>
              <div style="border: .5px #bdbdbd solid;"> </div>

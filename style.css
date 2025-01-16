@@ -8,7 +8,14 @@ body {
     text-align: center;
     line-height: 1.6;
 }
-
+.bannar-section{
+  position: fixed;
+    background: #f0ebe4;
+    height: 110px;
+    width: -webkit-fill-available;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 .aref-ruqaa-ink-regular {
   font-family: "Aref Ruqaa Ink", serif;
   font-weight: 400;
@@ -99,20 +106,38 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
     background-color: #e53935;
 }
 /* الشعار */
+.ast-builder-grid-row {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-column-gap: 20px;
+    overflow-wrap: anywhere;
+}
+.cart-menu{
+      position: fixed;
+    top: 25px;
+    font-size: 20px;
+    right: 25px;
+    
+    display: flex;
+    align-items:center;
+    cursor: pointer;
+
+}
+
+
   .logo-section {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: end;
             justify-content: center;
-            background-color: #86654a;
-           
-            color: #f8f4f0;
+                color: #91746b;
         }
 
         .logo-section img {
-            padding-top: 20px;
-            width: 100%; /* حجم افتراضي للصورة */
-            height: auto;
+            padding: 15px;
+            width: 80px; /* حجم افتراضي للصورة */
+            height: 15%;
         
         }
 
@@ -126,8 +151,8 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 /* العنوان الترحيبي */
 .welcome-section {
   
-    background-color: #f0ebe4;
-    padding: 30px 20px;
+background-color: #f8f4f0;
+    padding: 150px 50px 20px;
   
 }
 
@@ -356,8 +381,7 @@ form button:hover {
 /* حركات Fade لكل قسم */
 .fade-in-section {
     opacity: 100;
-    transform: translateY(-20px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+ transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-in-section.visible {
@@ -515,3 +539,7 @@ form button:hover {
     border-top: 2px dashed;
 }
 
+.astra-icon ast-icon-shopping-basket{
+        font-size: 24px;
+    color: #a38264;
+}

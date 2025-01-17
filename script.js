@@ -1,10 +1,12 @@
 // متغير لتخزين تفاصيل السلة
-let cart = [];
 
+    let cart = [];
 // تأثير التحميل والظهور التدريجي
 window.addEventListener('load', function () {
+
     setTimeout(function () {
         const loadingScreen = document.getElementById('loading-screen');
+        
         loadingScreen.style.opacity = '0';
         setTimeout(function () {
             loadingScreen.style.display = 'none';
@@ -19,7 +21,12 @@ window.addEventListener('load', function () {
 function addToCart(productId, productName) {
     const productPrice = getProductPrice(productId).price;
     if (productPrice <= 0) {
-        alert('للاسف نفذت الكمية من هذا المنتج');
+         Swal.fire({
+            title: 'عذراً',
+            text: 'لقد نفذت الكمية من هذا المنتج, اختر شيء اخر.',
+            icon: 'warning',
+            confirmButtonText: 'حسنًا'
+        });
         return;
     }
     const productExists = cart.find(item => item.id === productId);
@@ -30,8 +37,16 @@ function addToCart(productId, productName) {
         cart.push({ id: productId, name: productName, price: productPrice, quantity: 1 });
     }
 
-    alert(`${productName} تمت إضافته إلى السلة.`);
+
+     Swal.fire({
+        title: 'تمت الإضافة!',
+    text: `ㅤㅤㅤㅤㅤㅤㅤㅤتمت اضافة ${productName} الى السلة ㅤㅤㅤㅤㅤㅤㅤ صار بإمكانك ترسل طلبك او تضيف منتج ثاني لو تحب`,
+        icon: 'success',
+        confirmButtonText: 'اوك'
+    });
+
     updateCartTotal();
+ 
 }
 
 function updateCartTotal() {
@@ -175,12 +190,23 @@ function sendWhatsApp() {
     const includeDelivery = document.getElementById("includeDelivery").checked;
 
     if (!name || !address || !region || !delivery) {
-        alert('يرجى ملء جميع الحقول المطلوبة!');
+         Swal.fire({
+            title: 'ملاحظة',
+            text: 'يرجى تعبئة جميع المدخلات المطلوبة',
+            icon: 'warning',
+            confirmButtonText: 'حسنًا'
+        });
         return;
     }
 
     if (cart.length === 0) {
-        alert('سلتك فارغة! يرجى إضافة منتجات.');
+            Swal.fire({
+            title: 'ملاحظة',
+            text: 'سلتك فارغة! يرجى إضافة منتجات',
+            icon: 'warning',
+            confirmButtonText: 'حسنًا'
+        });
+     
         return;
     }
 

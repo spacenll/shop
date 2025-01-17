@@ -3,23 +3,76 @@ body {
     font-family: 'Aref Ruqaa', sans-serif; /* الخط الأساسي */
     margin: 0;
     padding: 0;
-    background-color: #f8f4f0;
+    background-color: #fff;
     color: #5a4638;
     text-align: center;
     line-height: 1.6;
 }
+
+.swal2-container button.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: .25em;
+    background-color: #a38264;
+    color: #fff;
+    font-size: 1em;
+}
+
+.cart-modal {
+    opacity: 0; /* إخفاء النافذة */
+    visibility: hidden; /* عدم عرض العنصر */
+    position: fixed;
+    top: 50%; /* موضع البداية خارج الشاشة */
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* العنصر يبدأ بحجم 0 */
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    z-index: 1000;
+    transition:  opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* إضافة تأثير التكبير */
+}
+.cart-backdrop {
+    opacity: 0; /* إخفاء الخلفية */
+    visibility: hidden; /* عدم عرض الخلفية */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية داكنة شفافة */
+    z-index: 999;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* تأثير سلس للظهور */
+}
+
+/* عندما يتم إضافة الكلاس .visible للخلفية */
+.cart-backdrop.visible {
+    opacity: 1; /* ظهور الخلفية */
+    visibility: visible; /* عرض الخلفية */
+}
+
+/* عند إضافة الكلاس .visible */
+.cart-modal.visible {
+    top: 50%; /* تمركز العنصر في منتصف الشاشة */
+    opacity: 1; /* جعل العنصر مرئيًا */
+    visibility: visible; /* عرض العنصر */
+    transform: translate(-50%, -50%) scale(1); /* التكبير إلى الحجم الطبيعي */
+}
+
+
 .bannar-section{
   position: fixed;
-    background: #f0ebe4;
+    background: #fff;
     height: 110px;
     width: -webkit-fill-available;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px 0px rgb(0 0 0 / 4%);
 }
 .aref-ruqaa-ink-regular {
   font-family: "Aref Ruqaa Ink", serif;
   font-weight: 400;
-  font-style: normal;
+font-style: normal;
 }
 
 .aref-ruqaa-ink-bold {
@@ -28,8 +81,8 @@ body {
   font-style: normal;
 }
   svg {
-            width: 25px;
-            height: 25px;
+            width: 15px;
+            height: 15px;
             fill: #86654a; /* Green color */
         }
     /* Cup icon */
@@ -151,8 +204,9 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
 /* العنوان الترحيبي */
 .welcome-section {
   
-background-color: #f8f4f0;
+background-color: #fff;
     padding: 150px 50px 20px;
+
   
 }
 
@@ -254,7 +308,8 @@ background-color: #f8f4f0;
 /* الأكثر طلبًا */
 .top-product-section {
     padding: 30px 20px;
-    background-color: #f9f7f5;
+    background-color: #fff;
+    box-shadow: 0 2px 20px 0px rgb(0 0 0 / 4%);
 }
 
 .top-product {
@@ -448,27 +503,6 @@ form button:hover {
 }
 
 /* إخفاء نافذة السلة بشكل افتراضي */
-.cart-modal {
-    display: none; /* إخفاء العنصر بشكل افتراضي */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 500px;
-    z-index: 1000;
-        transition: background-color 0.3s ease-in-out;
-
-}
-
-/* عندما تكون نافذة السلة مرئية */
-.cart-modal.visible {
-    display: block;
-}
 
 /* إخفاء زر الإغلاق عند النقر على السلة */
 
@@ -501,29 +535,14 @@ form button:hover {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
-
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out; /* إضافة انتقالات على التحول والتأثيرات */
 }
-.cart-backdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* خلفية داكنة شفافة */
-    z-index: 999;
-        transition: background-color 0.3s ease-in-out;
 
-}
 
 .close-cart-btn:hover {
     background-color: #91746b;
 }
 
-.cart-backdrop.visible {
-    display: block;
-}
 
 /* جعل كلمة "الأكثر طلبًا" مائلة وموضوعة على اليمين */
 .bestseller-label {

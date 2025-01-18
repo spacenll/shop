@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'B Arabic Style';
+    src: url('fonts/B-Arabic-Style.ttf') format('truetype');
+}
+
 body {
     font-family: 'B Arabic Style'; /* الخط الأساسي */
     margin: 0;
@@ -16,10 +21,7 @@ background-color: #fff;
     color: #fff;
     font-size: 1em;
 }
-@font-face {
-    font-family: 'B Arabic Style';
-    src: url('assets/fonts/B-Arabic-Style.ttf') format('truetype');
-}
+
 .how-to-order-section h3 {
     font-size: 23px;
 }

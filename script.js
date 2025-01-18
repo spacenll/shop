@@ -245,7 +245,7 @@ function sendWhatsApp() {
         if (result.isConfirmed) {
             const phonew = '+96877267075';
             const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
-            window.location.href = whatsappUrl; // ينقلك إلى الرابط مباشرة
+            window.location.href = (whatsappUrl, '_blank'); // ينقلك إلى الرابط مباشرة
         }
     });
 }

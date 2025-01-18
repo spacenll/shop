@@ -172,7 +172,7 @@ function updateDeliveryOptions() {
         delivery.innerHTML = `<option value="1">مندوب - 1 ريال</option>`;
     } else if (region === "صلالة" || region === "عوقد" || region === "صحلنوت") {
         delivery.innerHTML = `<option value="1.5">مندوب - 1.5 ريال</option>`;
-    } else if (region === "مسقط" || region === "اخرى") {
+    } else if (region === "مسقط" || region === "اخرى (اذكرها في الملاحظات)") {
         delivery.innerHTML = `
             <option value="1">نقليات - 1 ريال</option>
             <option value="2">مندوب إلى الباب - 2 ريال</option>
@@ -221,16 +221,16 @@ function sendWhatsApp() {
     }
 
     const total = calculateTotal(includeDelivery, deliveryCost);
-    const productsMessage = cart.map(item => `- ${item.name} (الكمية: ${item.quantity}, السعر الإجمالي: ${item.price * item.quantity} ريال)`).join('\n');
+    const productsMessage = cart.map(item => `- ${item.name} (الكمية: ${item.quantity}, السعر : ${item.price * item.quantity}  ريال عماني)`).join('\n');
     const message = 
         `مرحبًا، أريد تقديم طلب:\n` +
         `الاسم: ${name}\n` +
         `العنوان: ${address}\n` +
         `المنطقة: ${region}\n` +
-        `التوصيل: ${delivery} ريال\n` +
         `المنتجات:\n${productsMessage}\n` +
-        `المجموع: ${total} ريال\n` +
-        `ملاحظات إضافية: ${notes || 'لا توجد ملاحظات'}\n`;
+        `مبلغ التوصيل: ${delivery} ريال\n` +
+        `المجموع الكلي: ${total} ريال\n` +
+        `ملاحظات إضافية: ${notes || 'لا توجد ملاحظات'}`;
 
     const phone = '+96877267075';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;

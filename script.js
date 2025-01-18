@@ -220,12 +220,7 @@ function sendWhatsApp() {
      
         return;
     }
-  Swal.fire({
-        title: 'شكراً لك',
-        text: `سيتم توجيهك إلى واتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك فريقنا قريبًا لإرسال الفاتورة الخاصة بك لدفعها بإذن الله`,
-        icon: 'info',
-        confirmButtonText: 'تم'
-    });
+
     const total = calculateTotal(includeDelivery, deliveryCost);
     const productsMessage = cart.map(item => `- ${item.name} (الكمية: ${item.quantity}, السعر : ${item.price * item.quantity}  ريال عماني)`).join('\n');
     const message = 
@@ -239,8 +234,15 @@ function sendWhatsApp() {
         `المجموع الكلي: ${total} ريال\n` +
         `ملاحظات إضافية: ${notes || '-'}`;
     
-
-    const phonew = '+96877267075';
-    const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-}
+  Swal.fire({
+    title: 'شكراً لك',
+    text: `سيتم توجيهك إلى واتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك فريقنا قريبًا لإرسال الفاتورة الخاصة بك لدفعها بإذن الله`,
+    icon: 'info',
+    confirmButtonText: 'تم'
+}).then((result) => {
+    if (result.isConfirmed) {
+        const phonew = '+96877267075';
+        const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
+        window.location.href = whatsappUrl; // ينقلك إلى الرابط مباشرة
+    }
+});

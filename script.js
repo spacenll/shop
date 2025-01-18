@@ -172,7 +172,7 @@ function updateDeliveryOptions() {
         delivery.innerHTML = `<option value="1">مندوب - 1 ريال</option>`;
     } else if (region === "صلالة" || region === "عوقد" || region === "صحلنوت") {
         delivery.innerHTML = `<option value="1.5">مندوب - 1.5 ريال</option>`;
-    } else if (region === "مسقط" || region === "اخرى (اذكرها في الملاحظات)") {
+    } else if (region === "مسقط" || region === "اخرى") {
         delivery.innerHTML = `
             <option value="1">نقليات - 1 ريال</option>
             <option value="2">مندوب إلى الباب - 2 ريال</option>

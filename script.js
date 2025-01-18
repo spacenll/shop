@@ -200,49 +200,52 @@ function sendWhatsApp() {
     const deliveryCost = getDeliveryCost();
     const includeDelivery = document.getElementById("includeDelivery").checked;
 
+    // تحقق من المدخلات
     if (!name || !phone || !address || !region || !delivery) {
-         Swal.fire({
+        Swal.fire({
             title: 'ملاحظة',
             text: 'يرجى تعبئة جميع المدخلات المطلوبة',
             icon: 'warning',
             confirmButtonText: 'حسنًا'
         });
+        console.error("هناك مدخلات ناقصة:", { name, phone, address, region, delivery });
         return;
     }
 
+    // تحقق من السلة
     if (cart.length === 0) {
-            Swal.fire({
+        Swal.fire({
             title: 'ملاحظة',
             text: 'سلتك فارغة! يرجى إضافة منتجات',
             icon: 'warning',
             confirmButtonText: 'حسنًا'
         });
-     
         return;
     }
 
     const total = calculateTotal(includeDelivery, deliveryCost);
-    const productsMessage = cart.map(item => `- ${item.name} (الكمية: ${item.quantity}, السعر : ${item.price * item.quantity}  ريال عماني)`).join('\n');
+    const productsMessage = cart.map(item => `- ${item.name} (الكمية: ${item.quantity}, السعر : ${item.price * item.quantity} ريال عماني)`).join('\n');
     const message = 
         `مرحبًا، أريد تقديم طلب:\n` +
         `الاسم: ${name}\n` +
-         `الرقم: ${phone}\n` +
+        `الرقم: ${phone}\n` +
         `العنوان: ${address}\n` +
         `المنطقة: ${region}\n` +
         `المنتجات:\n${productsMessage}\n` +
         `مبلغ التوصيل: ${delivery} ريال\n` +
         `المجموع الكلي: ${total} ريال\n` +
         `ملاحظات إضافية: ${notes || '-'}`;
-    
-  Swal.fire({
-    title: 'شكراً لك',
-    text: `سيتم توجيهك إلى الواتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك فريقنا قريبًا لإرسال الفاتورة الخاصة بك لدفعها بإذن الله`,
-    icon: 'info',
-    confirmButtonText: 'تم'
-}).then((result) => {
-    if (result.isConfirmed) {
-        const phonew = '+96877267075';
-        const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
-        window.location.href = whatsappUrl; // ينقلك إلى الرابط مباشرة
-    }
-});
+
+    Swal.fire({
+        title: 'شكراً لك',
+        text: `سيتم توجيهك إلى الواتساب مع رسالة تتضمن ما طلبته، وسيتواصل معك فريقنا قريبًا لإرسال الفاتورة الخاصة بك لدفعها بإذن الله`,
+        icon: 'info',
+        confirmButtonText: 'تم'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const phonew = '+96877267075';
+            const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappUrl; // ينقلك إلى الرابط مباشرة
+        }
+    });
+}

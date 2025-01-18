@@ -192,6 +192,7 @@ function getDeliveryCost() {
 // إرسال الطلب عبر واتساب
 function sendWhatsApp() {
     const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
     const address = document.getElementById('address').value.trim();
     const region = document.getElementById("region").value;
     const delivery = document.getElementById("delivery").value;
@@ -199,7 +200,7 @@ function sendWhatsApp() {
     const deliveryCost = getDeliveryCost();
     const includeDelivery = document.getElementById("includeDelivery").checked;
 
-    if (!name || !address || !region || !delivery) {
+    if (!name || !phone || !address || !region || !delivery) {
          Swal.fire({
             title: 'ملاحظة',
             text: 'يرجى تعبئة جميع المدخلات المطلوبة',
@@ -225,12 +226,13 @@ function sendWhatsApp() {
     const message = 
         `مرحبًا، أريد تقديم طلب:\n` +
         `الاسم: ${name}\n` +
+         `الرقم: ${phone}\n` +
         `العنوان: ${address}\n` +
         `المنطقة: ${region}\n` +
         `المنتجات:\n${productsMessage}\n` +
         `مبلغ التوصيل: ${delivery} ريال\n` +
         `المجموع الكلي: ${total} ريال\n` +
-        `ملاحظات إضافية: ${notes || 'لا توجد ملاحظات'}`;
+        `ملاحظات إضافية: ${notes || '-'}`;
 
     const phone = '+96877267075';
     const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;

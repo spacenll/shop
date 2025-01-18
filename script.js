@@ -2,20 +2,30 @@
 
     let cart = [];
 // تأثير التحميل والظهور التدريجي
-window.addEventListener('load', function () {
-
+document.addEventListener('DOMContentLoaded', function () {
+    // بدء التحميل بعد تحميل الصفحة
     setTimeout(function () {
+        // الحصول على عنصر شاشة التحميل
         const loadingScreen = document.getElementById('loading-screen');
-        
-        loadingScreen.style.opacity = '0';
-        setTimeout(function () {
-            loadingScreen.style.display = 'none';
-            const mainContent = document.getElementById('main-content');
-            mainContent.style.display = 'block';
-            mainContent.classList.add('visible');
-        }, 800); 
-    }, 1000); 
+        if (loadingScreen) {
+            // تخفي شاشة التحميل تدريجيًا
+            loadingScreen.style.opacity = '0';
+            setTimeout(function () {
+                loadingScreen.style.display = 'none';
+
+                // إظهار المحتوى الرئيسي
+                const mainContent = document.getElementById('main-content');
+                if (mainContent) {
+                    mainContent.style.display = 'block';
+                    mainContent.classList.add('visible');
+                } 
+            }, 800); // تأخير اختفاء شاشة التحميل
+        } else {
+            console.error('Element with id "loading-screen" not found.');
+        }
+    }, 1000); // تأخير بدء الانتقال
 });
+
 
 // إضافة المنتج إلى السلة
 function addToCart(productId, productName) {

@@ -1,9 +1,8 @@
-/* عام */
 body {
-    font-family: 'Aref Ruqaa', sans-serif; /* الخط الأساسي */
+    font-family: 'B Arabic Style'; /* الخط الأساسي */
     margin: 0;
     padding: 0;
-    background-color: #fff;
+background-color: #fff;
     color: #5a4638;
     text-align: center;
     line-height: 1.6;
@@ -16,7 +15,22 @@ body {
     color: #fff;
     font-size: 1em;
 }
+@font-face {
+    font-family: 'B Arabic Style';
+    src: url('assets/fonts/B-Arabic-Style.ttf') format('truetype');
+}
+.how-to-order-section h3 {
+    font-size: 23px;
+}
 
+.cart-section .cart-modal #cart-items p  {
+    color:#d9a4a4;
+    font-size: 25px;
+}
+.cart-section .cart-modal h2  {
+    color:#a38264;
+        font-size: 30px;
+}
 .cart-modal {
     opacity: 0; /* إخفاء النافذة */
     visibility: hidden; /* عدم عرض العنصر */
@@ -69,17 +83,7 @@ body {
     z-index: 1000;
     box-shadow: 0 2px 20px 0px rgb(0 0 0 / 4%);
 }
-.aref-ruqaa-ink-regular {
-  font-family: "Aref Ruqaa Ink", serif;
-  font-weight: 400;
-font-style: normal;
-}
 
-.aref-ruqaa-ink-bold {
-  font-family: "Aref Ruqaa Ink", serif;
-  font-weight: 700;
-  font-style: normal;
-}
   svg {
             width: 15px;
             height: 15px;
@@ -116,9 +120,7 @@ font-style: normal;
 
 
 
-h1, h2, h3, h4, h5, h6, p, button, input, textarea {
-    font-family: 'Aref Ruqaa', sans-serif;
-}
+
 
 .class-a {
     font-size: 18px;
@@ -149,6 +151,7 @@ h1, h2, h3, h4, h5, h6, p, button, input, textarea {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
+    font-family: B Arabic Style;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease-in-out;
@@ -215,9 +218,7 @@ background-color: #fff;
     margin-bottom: 10px;
 }
 
-.welcome-section p {
-    font-size: 18px;
-}
+
    .typing {
             display: inline;
             white-space: nowrap;
@@ -292,9 +293,9 @@ background-color: #fff;
         z-index: 8;
     background-color: #a38264;
     color: #ffffff;
-    font-family: 'Aref Ruqaa', sans-serif;
+    font-family: 'B Arabic Style', sans-serif;
     border: none;
-    padding: 10px 15px;
+    padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
         bottom: 20px;
@@ -337,7 +338,7 @@ background-color: #fff;
 
 .product-details button {
     background-color: #a38264;
-        font-family: 'Aref Ruqaa', sans-serif;
+    font-family: 'B Arabic Style', sans-serif;
     color: #ffffff;
     border: none;
     padding: 10px 15px;
@@ -385,8 +386,12 @@ background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 30px;
   
+}
+
+.step p {
+     font-size: 20px;  
 }
 
 /* فورم الطلب */
@@ -403,11 +408,13 @@ form input, form textarea, form button,  form select, form select option {
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #e0dcd7;
-    font-family: 'Aref Ruqaa';
+    font-family: 'B Arabic Style';
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 20px;
 }
-
+body p {
+   font-size: 20px; 
+}
 form button {
     background-color: #a38264;
     color: white;
@@ -444,7 +451,7 @@ form button:hover {
     transform: translateY(0);
 }
 .cart-button {
-       font-family: 'Aref Ruqaa';
+       font-family: 'B Arabic Style';
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -481,7 +488,7 @@ form button:hover {
     }
 
     .product button {
-        font-size: 14px; /* تحسين حجم أزرار المنتجات */
+        font-size: 18px; /* تحسين حجم أزرار المنتجات */
     }
 
 
@@ -534,6 +541,7 @@ form button:hover {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    font-family: B Arabic Style;
     cursor: pointer;
     transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out; /* إضافة انتقالات على التحول والتأثيرات */
 }

@@ -142,6 +142,8 @@
         <form id="orderForm">
             <label for="name">الاسم:</label>
             <input type="text" id="name" placeholder="أدخل اسمك" required>
+             <label for="phone">رقم الهاتف:</label>
+             <input type="text" id="phone" placeholder="ادخل رقم المستلم" required="">
                <label for="region">المنطقة:</label>
     <select id="region" onchange="updateDeliveryOptions()" required>
         <option value="">اختر منطقة التوصيل</option>
@@ -166,7 +168,7 @@
         </label>
     </div>
             <label for="notes">ملاحظات إضافية:</label>
-            <textarea id="notes" placeholder="حاب تضيف اي شي ؟ "></textarea>
+            <textarea id="notes" placeholder="ل"></textarea>
             
             <button type="button" onclick="sendWhatsApp()">أرسل الطلب</button>
             <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

@@ -240,7 +240,7 @@ function sendWhatsApp() {
         `ملاحظات إضافية: ${notes || '-'}`;
     
 
-    const phone = '+96877267075';
-    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    const phonew = '+96877267075';
+    const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 }

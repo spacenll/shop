@@ -243,9 +243,9 @@ function sendWhatsApp() {
         confirmButtonText: 'تم'
     }).then((result) => {
         if (result.isConfirmed) {
-            const phonew = '+96877267075';
-            const whatsappUrl = `https://wa.me/${phonew}?text=${encodeURIComponent(message)}`;
-            window.location.href = (whatsappUrl, '_blank'); // ينقلك إلى الرابط مباشرة
+     const phonew = '+96877267075';
+            const whatsappUrl = https://wa.me/${phonew}?text=${encodeURIComponent(message)};
+            window.open(whatsappUrl, '_blank');
         }
     });
 }

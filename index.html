@@ -61,7 +61,7 @@
 </button>
   <div class="products-wrapper">
             <div class="product" data-id="101">
-                <img src="images/product1.JPG" alt="صورة كوب اللازورد">
+                <img src="images/product1.JPG" alt="صورة كوب اللازورد" class="thumbnail" onclick="openImage(this.src)">
                    <h4>كوب اللازورد</h4>
                  <div class="class-a">أزرق، هادئ - سعة 200مل</div>
                 <div class="product-price" >6.5 ريال  </div>
@@ -70,7 +70,7 @@
             </div>
             
              <div class="product" data-id="102">
-                <img src="images/product2.JPG" alt="العقيق الأبيض">
+                <img src="images/product2.JPG" alt="العقيق الأبيض" class="thumbnail" onclick="openImage(this.src)">
                  <h4>كوب العقيق الأبيض</h4>
                       <div class="class-a">أبيض، مخطط - سعة 200مل</div>
             <div class="product-price" >6.5 ريال  </div>
@@ -78,7 +78,7 @@
             </div>
             
             <div class="product" data-id="103">
-                <img src="images/product3.JPG" alt="العقيق البرونزي">
+                <img src="images/product3.JPG" alt="العقيق البرونزي" class="thumbnail" onclick="openImage(this.src)">
                  <h4>كوب العقيق البرونزي</h4>
                       <div class="class-a">ذهبي، لامع - سعة 200مل</div>
             <div class="product-price" >6.5 ريال  </div>
@@ -86,7 +86,7 @@
             </div>
             
              <div class="product" data-id="104">
-                <img src="images/product4.JPG" alt="الكوارتز الوردي">
+                <img src="images/product4.JPG" alt="الكوارتز الوردي" class="thumbnail" onclick="openImage(this.src)">
                  <h4>كوب الكوارتز الوردي</h4>
                       <div class="class-a">وردي، سادة - سعة 200مل</div>
             <div class="product-price" >6.5 ريال  </div>
@@ -115,7 +115,7 @@
         <br>
         <div class="products-container" style="cursor: grab;">
             <div class="producttwo" data-id="1042">
-                <img src="images/product5.JPG" alt="صورة كوب اللازورد">
+                <img src="images/product5.JPG" alt="صورة كوب اللازورد" class="thumbnail" onclick="openImage(this.src)">
                    <h4>كوب التوباز</h4>
                  <div class="class-a">بني، منقش - سعة 200مل</div>
                 <div class="product-price">4.5 ريال  </div>
@@ -124,7 +124,7 @@
             </div>
             
              <div class="producttwo" data-id="102">
-                <img src="images/product6.JPG" alt="العقيق الأبيض">
+                <img src="images/product6.JPG" alt="العقيق الأبيض" class="thumbnail" onclick="openImage(this.src)">
                  <h4>كوب اليشم الكريمي</h4>
                       <div class="class-a">كريمي، مموه - سعة 200مل</div>
             <div class="product-price">4.5 ريال  </div>
@@ -150,7 +150,7 @@
     <section class="top-product-section fade-in-section">
      <div class="top-product">
                <h3 class="bestseller-label">الأقل سعراً</h3>
-               <img src="images/product9.JPG" alt="صورة  جوز الهند">
+               <img src="images/product9.JPG" alt="صورة  جوز الهند" class="thumbnail" onclick="openImage(this.src)">
             <div class="product-details">
                 <h4>اناء جوز الهند</h4>
                   <p>المصنوع من ثمرة جوز الهند</p>
@@ -169,7 +169,7 @@
         <br>
         <div class="products-container" style="cursor: grab;">
             <div class="producttwo" data-id="1042">
-                <img src="images/product7.JPG" alt="صورة كوب اللازورد">
+                <img src="images/product7.JPG" alt="صورة كوب اللازورد" class="thumbnail" onclick="openImage(this.src)">
                    <h4>كوب الأفينتورين</h4>
                  <div class="class-a">أزرق، هادئ - سعة 200مل</div>
                 <div class="product-price">5.5 ريال  </div>
@@ -178,7 +178,7 @@
             </div>
             
              <div class="producttwo" data-id="102">
-                <img src="images/product8.JPG" alt="العقيق الأبيض">
+                <img src="images/product8.JPG" alt="العقيق الأبيض" class="thumbnail" onclick="openImage(this.src)">
                  <h4>كوب البن</h4>
                       <div class="class-a">كريمي، مموه - سعة 200مل</div>
             <div class="product-price">5.5 ريال  </div>
@@ -293,6 +293,9 @@
     
     <br>
   
+    </div>
+    <div id="overlay" class="overlay" onclick="closeImage()">
+        <img id="largeImage" src="" alt="صورة مكبرة">
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,7 +1,17 @@
 // متغير لتخزين تفاصيل السلة
 
     let cart = [];
+ function openImage(src) {
+            const overlay = document.getElementById('overlay');
+            const largeImage = document.getElementById('largeImage');
+            largeImage.src = src;
+            overlay.style.display = 'flex';
+        }
 
+        function closeImage() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = 'none';
+        }
      let leftClicks = 0; // عداد النقرات على زر اليسار
 let rightClicks = 0; // عداد النقرات على زر اليمين
 

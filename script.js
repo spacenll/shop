@@ -30,50 +30,24 @@
                 scrollContainer('right');
             });
         }
-    });
+});
 
-  function scrollContainer1(direction) {
-    const container1 = document.querySelector('.products-wrapper1');  // استخدام container1 بدلاً من container
-    if (container1) {
-        const scrollAmount1 = 250; // مقدار التمرير لكل نقرة
-        if (direction === 'left') {
-            container1.scrollLeft -= scrollAmount1;  // استخدام container1 هنا
-        } else if (direction === 'right') {
-            container1.scrollLeft += scrollAmount1;  // استخدام container1 هنا
-        }
-    }
-}
+
 
 // التأكد من تحميل الصفحة بالكامل قبل إضافة أحداث الأزرار
-window.addEventListener('load', function() {
-    const leftBtn1 = document.querySelector('.scroll-btmn.left');
-    const rightBtn1 = document.querySelector('.scroll-btmn.right');
-
-    if (leftBtn1) {  // تأكد من استخدام leftBtn1 وليس leftBtn
-        leftBtn1.addEventListener('click', function() {
-            scrollContainer1('left');  // تأكد من استدعاء الدالة scrollContainer1
-        });
-    }
-
-    if (rightBtn1) {  // تأكد من استخدام rightBtn1 وليس rightBtn
-        rightBtn1.addEventListener('click', function() {
-            scrollContainer1('right');  // تأكد من استدعاء الدالة scrollContainer1
-        });
-    }
-});
 
 
 
 const productsSection = document.querySelector('.products-section');
 const howSection = document.querySelector('.how-to-order-section');
 const orderSection = document.querySelector('.order-form-section');
-const p2Section = document.querySelector('.products-section1');
+
 // وظيفة لتفعيل الحركة عند ظهور القسم
 function handleScroll() {
     const sectionPosition = productsSection.getBoundingClientRect().top; // 
      const sectionPosition1 = howSection.getBoundingClientRect().top;
        const sectionPosition2 = orderSection.getBoundingClientRect().top;
-     const sectionPosition3 = p2Section.getBoundingClientRect().top;
+     
     const screenHeight = window.innerHeight; // ارتفاع الشاشة
 
     if (sectionPosition < screenHeight) {
@@ -87,10 +61,7 @@ function handleScroll() {
         {
            orderSection.classList.add('show');
         }
-    if (sectionPosition3 < screenHeight)
-        {
-           p2Section.classList.add('show');
-        }
+ 
 }
 
 // الاستماع لحدث التمرير
@@ -178,7 +149,15 @@ function getProductPrice(productId) {
         101: { name: "كوب اللازورد", price: 6.5 },
         102: { name: "كوب العقيق الأبيض", price: 6.5 },
         103: { name: "كوب العقيق البرونزي", price: 6.5 },
-        104: { name: "كوب الكوارتز الوردي", price: 6.5 }
+        104: { name: "كوب الكوارتز الوردي", price: 6.5 },
+        
+        105: { name: "كوب التوباز", price: 4.5 },
+        106: { name: "كوب اليشم الكريمي", price: 4.5 },
+        
+        107: { name: "اناء جوز الهند", price: 3.5 },
+        
+        108: { name: "كوب الأفينتورين", price: 5.5 },
+        109: { name: "كوب البن", price: 5.5 }
     };
     return prices[productId] || { name: "غير معروف", price: 0 };
 }

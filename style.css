@@ -12,6 +12,13 @@ background-color: #fff;
     text-align: center;
     line-height: 1.6;
 }
+@media (max-width: 768px) { /* استهداف الشاشات الصغيرة */
+    button:focus, 
+    button:active {
+        outline: none; /* إزالة المربع الأزرق */
+        box-shadow: none; /* إزالة الظل */
+    }
+}
 
 .swal2-container button.swal2-styled.swal2-confirm {
     font-family: 'B Arabic Style';
@@ -76,10 +83,14 @@ background-color: #fff;
     transform: translate(-50%, -50%) scale(1); /* التكبير إلى الحجم الطبيعي */
 }
 
+.product-no{
+    opacity: 50%;
+    border: "4px dotted #91746b";
+}
 
 .bannar-section{
   position: fixed;
-    background: #fff;
+    background: #191919;
     height: 110px;
     width: -webkit-fill-available;
     z-index: 1000;
@@ -189,7 +200,7 @@ background-color: #fff;
             flex-direction: column;
             align-items: end;
             justify-content: center;
-                color: #91746b;
+                color: #fff;
         }
 
         .logo-section img {
@@ -208,17 +219,60 @@ background-color: #fff;
 
 /* العنوان الترحيبي */
 .welcome-section {
-  
-background-color: #fff;
-    padding: 150px 50px 20px;
+    position: relative; /* لضبط الطبقات */
+    text-align: center; /* لمحاذاة النص */
+    color: #fff; /* لون النص ليظهر بوضوح فوق الصورة */
+    padding: 20px 20px; /* مسافة داخلية للنص */
+    background-image: url('images/bannar.webp'); /* إضافة الصورة كخلفية */
+    background-size: cover; /* لجعل الصورة تغطي الخلفية بالكامل */
+    background-position: center; /* لتوسيط الصورة */
+    background-repeat: no-repeat; /* لمنع تكرار الصورة */
+    height: 50vh; /* لضبط ارتفاع القسم */
+    display: flex; /* لتفعيل التحكم بمحاذاة النص */
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    justify-content: flex-start; /* جعل النص في أعلى القسم */
+}
 
-  
+/* إعداد حركة Fade In */
+.fade-in {
+    opacity: 0; /* النص يكون مخفيًا في البداية */
+    transform: translateX(100px); /* بدء الحركة من اليمين */
+    animation: fadeIn 1.5s ease-out 1.5s forwards; /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
+}
+
+/* تعريف حركة Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100px); /* بداية الحركة من اليمين */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* نهاية الحركة بالوضع الطبيعي */
+    }
+}
+
+@keyframes fadeInP {
+    0% {
+        opacity: 0;
+        transform: translateY(100px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* نهاية الحركة بالوضع الطبيعي */
+    }
 }
 
 .welcome-section h2 {
     font-size: 28px;
     margin-bottom: 10px;
 }
+
+.welcome-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 
 
    .typing {
@@ -249,6 +303,10 @@ background-color: #fff;
 /* المنتجات */
 .products-section {
     padding: 30px 20px;
+           opacity: 0; /* النص يكون مخفيًا في البداية */
+    transform: translateY(100px); /* بدء الحركة من اليمين */
+    animation: fadeInP 1.8s ease-out 1.8s forwards; /* مدة التأثير 1.8 ثانية مع تأخير 1.8 ثانية */
+ /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
 }
 
 .products-section h3 {
@@ -261,6 +319,7 @@ background-color: #fff;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    
 }
 
 .product {
@@ -270,7 +329,6 @@ background-color: #fff;
     width: 250px;
     margin: 10px;
     text-align: center;
-    transition: transform 0.3s;
     box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -292,7 +350,7 @@ background-color: #fff;
 .product button {
     position: relative;
         z-index: 8;
-    background-color: #a38264;
+    background-color: #86654a;
     color: #ffffff;
     font-family: 'B Arabic Style', sans-serif;
     border: none;
@@ -442,15 +500,8 @@ form button:hover {
 }
 
 /* حركات Fade لكل قسم */
-.fade-in-section {
-    opacity: 100;
- transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
 
-.fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 .cart-button {
        font-family: 'B Arabic Style';
     position: fixed;

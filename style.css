@@ -12,18 +12,7 @@ background-color: #fff;
     text-align: center;
     line-height: 1.6;
 }
-@media (max-width: 768px) {
-    button {
-        user-select: none; /* منع تحديد النص */
-        -webkit-tap-highlight-color: transparent; /* إزالة التأثير الأزرق في الأجهزة التي تعمل باللمس */
-    }
 
-    button:focus,
-    button:active {
-        outline: none; /* إزالة الإطار الأزرق */
-        box-shadow: none; /* إزالة الظلال */
-    }
-}
 
 
 .swal2-container button.swal2-styled.swal2-confirm {
@@ -117,7 +106,7 @@ background-color: #fff;
             height: 15px;
             fill: #86654a; /* Green color */
         }
-    /* Cup icon */
+/* Cup icon */
     #loading-screen .cup-icon {
       width: 100px;
       height:100px;
@@ -147,9 +136,10 @@ background-color: #fff;
     }
 
 
-
-
-
+/* إزالة تأثير الظل الأزرق أو الخط عند النقر على أي عنصر */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 .class-a {
     font-size: 18px;
     color: grey;

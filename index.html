@@ -40,7 +40,6 @@
         <br>
         <br>
         <br>
-        <br>
         
     </header>
 
@@ -58,7 +57,8 @@
     <p>اختياراتنا الخاصة</p>
 
         <div class="products-container">
-<button class="scroll-btn left">←</button>
+<button class="scroll-btn left"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+</button>
   <div class="products-wrapper">
             <div class="product" data-id="101">
                 <img src="images/product1.JPG" alt="صورة كوب اللازورد">
@@ -100,14 +100,15 @@
               <div class="product-price" >5 ريال  </div>
                 <button onclick="addToCart(105, 'غير متوفر حاليا')">  أضف إلى السلة  <i class="fa-solid fa-cart-shopping"></i></button>
             </div> --></div>
-                           <button class="scroll-btn right">→</button>
+                           <button class="scroll-btn right"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+</button>
 
 
         </div>
     </section>
     
        <!-- قسم الثاني -->
-  <section class="products-section fade-in-section show">
+  <section class="two-products-section">
        
     <p>المنتجات المميزة</p>
 
@@ -148,7 +149,7 @@
     
     <section class="top-product-section fade-in-section">
      <div class="top-product">
-               <h3 class="bestseller-label">الأكثر مبيعاً !</h3>
+               <h3 class="bestseller-label">الأقل سعراً</h3>
                <img src="images/product9.JPG" alt="صورة  جوز الهند">
             <div class="product-details">
                 <h4>اناء جوز الهند</h4>
@@ -161,7 +162,7 @@
     
     <!-- قسم الثاني -->
     
-  <section class="products-section fade-in-section show">
+  <section class="last-product show">
        
     <p>المنتجات الخارجة عن المألوف</p>
 
@@ -219,9 +220,11 @@
                 <p>أرسل الطلب</p>
             </div>
         </div>
+         <div id="order"></div>
     </section>
 
     <!-- السلة -->
+    
     <section class="cart-section">
         
      
@@ -241,9 +244,11 @@
             <button onclick="closeCart()" class="close-cart-btn">إغلاق</button>
         </div>
     </section>
+   
 <br>
     <!-- نموذج الطلب -->
-    <section class="order-form-section fade-in-section" id="order">
+    
+    <section class="order-form-section fade-in-section" >
         <h2>ارسل طلبك</h2>
         <form id="orderForm">
             <label for="name">الاسم:</label>
@@ -273,6 +278,7 @@
         </input>
         </label>
     </div>
+        
             <label for="notes">ملاحظات إضافية:</label>
             <textarea id="notes" placeholder="حاب تضيف اي شي او تخبرنا بشي؟"></textarea>
             

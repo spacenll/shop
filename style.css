@@ -89,14 +89,11 @@ background-color: #fff;
     transform: translate(-50%, -50%) scale(1); /* التكبير إلى الحجم الطبيعي */
 }
 .producttwo {
-    background-color: #ffffff;
+        background-color: #ffffff;
     padding: 15px;
     border-radius: 20px;
-    flex: 0 0 auto;
-    width: 250px;
     margin: 10px;
-    min-width: 180px;
-    max-width: 90px;
+    width: 80%;
     text-align: center;
     box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
 }
@@ -109,7 +106,7 @@ background-color: #fff;
 .bannar-section{
   position: fixed;
     background: #191919;
-    height: 110px;
+    height: 80px;
     width: -webkit-fill-available;
     z-index: 1000;
     box-shadow: 0 2px 20px 0px rgb(0 0 0 / 4%);
@@ -202,7 +199,6 @@ padding: 10px;
 }
 .cart-menu{
       position: fixed;
-    top: 25px;
     font-size: 20px;
     right: 25px;
     
@@ -223,7 +219,7 @@ padding: 10px;
 
         .logo-section img {
             padding: 15px;
-            width: 80px; /* حجم افتراضي للصورة */
+            width: 50px; /* حجم افتراضي للصورة */
             height: 15%;
         
         }
@@ -312,13 +308,14 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 /* المنتجات */
 .products-section {
        padding: 30px 20px;
-    opacity: 0; /* القسم مخفي في البداية */
-    transform: translateX(100px); /* يبدأ من الأسفل */
+    opacity: 0.3; /* القسم مخفي في البداية */
+    transform: translateY(-100px); /* يبدأ من الأسفل */
     transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
  /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
 }
 .products-section.show {
     opacity: 1; /* يظهر بالكامل */
+        
     transform: translateY(0); /* يعود للوضع الطبيعي */
 }
 .products-section1 {
@@ -328,21 +325,69 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
     transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
  /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
 }
+
+
 .products-section1.show {
     opacity: 1; /* يظهر بالكامل */
     transform: translateY(0); /* يعود للوضع الطبيعي */
+    
 }
+
 .products-section2 {
        padding: 30px 20px;
     opacity: 0; /* القسم مخفي في البداية */
-    transform: translateY(100px); /* يبدأ من الأسفل */
+    transform: translateY(100px), scale(0); /* يبدأ من الأسفل */
     transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
  /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
 }
-.products-section.show2 {
+
+
+.two-products-section {
+       padding: 30px 20px;
+    opacity: 0; /* القسم مخفي في البداية */
+    transform: translateY(0); /* يبدأ من الأسفل */
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
+ /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
+}
+
+.two-products-section.show {
     opacity: 1; /* يظهر بالكامل */
     transform: translateY(0); /* يعود للوضع الطبيعي */
 }
+
+/* الجوز */
+.top-product-section {
+    padding: 30px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 20px 0px rgb(0 0 0 / 4%);
+     opacity: 0; /* القسم مخفي في البداية */
+    transform: translateY(10px); /* يبدأ من الأسفل */
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out; 
+}
+
+
+.top-product-section.show {
+    opacity: 1; /* يظهر بالكامل */
+    transform: translateY(0); /* يعود للوضع الطبيعي */
+}
+
+
+
+.last-product {
+    padding: 30px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 20px 0px rgb(0 0 0 / 4%);
+     opacity: 0; /* القسم مخفي في البداية */
+    transform: translateY(-100px); /* يبدأ من الأسفل */
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out; 
+}
+
+
+.last-product.show {
+    opacity: 1; /* يظهر بالكامل */
+    transform: translateY(0); /* يعود للوضع الطبيعي */
+}
+
 .products-section h3 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -380,32 +425,31 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
     box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
 }
  .scroll-btn {
-            position: absolute;
+               position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: #91746b;
+    background-color: #ffffff;
     border: none;
-    padding: 50px 10px 50px;
+    padding: 250px 10px 250px;
     font-size: 20px;
     cursor: pointer;
     z-index: 10;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 4px rgb(255 255 255);
     border-radius: 20px;
-    }
+}
 
     .scroll-btn.left {
         left: 0;
-            left: 10px;
+            
     }
 
     .scroll-btn.right {
-        right: 0;
+            right: -10px;
+        display: none;
     }
 
-    .scroll-btn:hover {
-        background-color: #d9d6d5;
-     
-    }
+ 
 
 
 
@@ -476,11 +520,6 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
     background-color: #86654a;
 }
 /* الأكثر طلبًا */
-.top-product-section {
-    padding: 30px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 20px 0px rgb(0 0 0 / 4%);
-}
 
 .top-product {
     display: flex;

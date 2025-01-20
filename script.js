@@ -2,17 +2,40 @@
 
     let cart = [];
 
-     function scrollContainer(direction) {
-        const container = document.querySelector('.products-wrapper');
-        if (container) {
-            const scrollAmount = 250; // مقدار التمرير لكل نقرة
-            if (direction === 'left') {
-                container.scrollLeft -= scrollAmount;
-            } else if (direction === 'right') {
-                container.scrollLeft += scrollAmount;
+     let leftClicks = 0; // عداد النقرات على زر اليسار
+let rightClicks = 0; // عداد النقرات على زر اليمين
+
+function scrollContainer(direction) {
+    const container = document.querySelector('.products-wrapper');
+    const rightBtn = document.querySelector('.scroll-btn.right');
+    const leftBtn = document.querySelector('.scroll-btn.left');
+
+    if (container) {
+        const scrollAmount = 250; // مقدار التمرير لكل نقرة
+        const maxClicks = 4; // عدد الضغطات قبل إخفاء الزر
+
+        if (direction === 'left') {
+            container.scrollLeft -= scrollAmount;
+            rightClicks = 0; // إعادة تعيين عداد اليمين عند التمرير لليسار
+            leftClicks++; // زيادة عداد اليسار
+            rightBtn.style.display = 'block'; // إظهار زر اليمين
+
+            if (leftClicks >= maxClicks) {
+                leftBtn.style.display = 'none'; // إخفاء زر اليسار
+            }
+        } else if (direction === 'right') {
+            container.scrollLeft += scrollAmount;
+            leftClicks = 0; // إعادة تعيين عداد اليسار عند التمرير لليمين
+            rightClicks++; // زيادة عداد اليمين
+            leftBtn.style.display = 'block'; // إظهار زر اليسار
+
+            if (rightClicks >= maxClicks) {
+                rightBtn.style.display = 'none'; // إخفاء زر اليمين
             }
         }
     }
+}
+
 
     // التأكد من تحميل الصفحة بالكامل قبل إضافة أحداث الأزرار
     window.addEventListener('load', function() {
@@ -41,13 +64,17 @@
 const productsSection = document.querySelector('.products-section');
 const howSection = document.querySelector('.how-to-order-section');
 const orderSection = document.querySelector('.order-form-section');
-
+const TwoPSection = document.querySelector('.two-products-section');
+const ToPSection = document.querySelector('.top-product-section');
+const LastSection = document.querySelector('.last-product');
 // وظيفة لتفعيل الحركة عند ظهور القسم
 function handleScroll() {
     const sectionPosition = productsSection.getBoundingClientRect().top; // 
      const sectionPosition1 = howSection.getBoundingClientRect().top;
        const sectionPosition2 = orderSection.getBoundingClientRect().top;
-     
+          const sectionPosition3 = TwoPSection.getBoundingClientRect().top;
+      const sectionPosition4 = ToPSection.getBoundingClientRect().top;
+       const sectionPosition5 = LastSection.getBoundingClientRect().top;
     const screenHeight = window.innerHeight; // ارتفاع الشاشة
 
     if (sectionPosition < screenHeight) {
@@ -61,7 +88,18 @@ function handleScroll() {
         {
            orderSection.classList.add('show');
         }
- 
+   if (sectionPosition3 < screenHeight)
+        {
+           TwoPSection.classList.add('show');
+        }
+    if (sectionPosition4 < screenHeight)
+        {
+           ToPSection.classList.add('show');
+        }
+    if (sectionPosition5 < screenHeight)
+        {
+           LastSection.classList.add('show');
+        }
 }
 
 // الاستماع لحدث التمرير

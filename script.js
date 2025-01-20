@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             console.error('Element with id "loading-screen" not found.');
         }
-    }, 1000); // تأخير بدء الانتقال
+    }, 1300); // تأخير بدء الانتقال
 });
 
 

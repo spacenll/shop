@@ -248,14 +248,14 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 }
 
 /* إعداد حركة Fade In */
-.fade-in {
+.fade-in1 {
     opacity: 0; /* النص يكون مخفيًا في البداية */
     transform: translateX(100px); /* بدء الحركة من اليمين */
-    animation: fadeIn 1.5s ease-out 1.5s forwards; /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
+    animation: fadeIn1 1.5s ease-out 1.5s forwards; /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
 }
 
 /* تعريف حركة Fade In */
-@keyframes fadeIn {
+@keyframes fadeIn1 {
     0% {
         opacity: 0;
         transform: translateX(100px); /* بداية الحركة من اليمين */

@@ -12,13 +12,19 @@ background-color: #fff;
     text-align: center;
     line-height: 1.6;
 }
-@media (max-width: 768px) { /* استهداف الشاشات الصغيرة */
-    button:focus, 
+@media (max-width: 768px) {
+    button {
+        user-select: none; /* منع تحديد النص */
+        -webkit-tap-highlight-color: transparent; /* إزالة التأثير الأزرق في الأجهزة التي تعمل باللمس */
+    }
+
+    button:focus,
     button:active {
-        outline: none; /* إزالة المربع الأزرق */
-        box-shadow: none; /* إزالة الظل */
+        outline: none; /* إزالة الإطار الأزرق */
+        box-shadow: none; /* إزالة الظلال */
     }
 }
+
 
 .swal2-container button.swal2-styled.swal2-confirm {
     font-family: 'B Arabic Style';
@@ -252,16 +258,7 @@ background-color: #fff;
     }
 }
 
-@keyframes fadeInP {
-    0% {
-        opacity: 0;
-        transform: translateY(100px); 
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0); /* نهاية الحركة بالوضع الطبيعي */
-    }
-}
+
 
 .welcome-section h2 {
     font-size: 28px;
@@ -302,35 +299,148 @@ background-color: #fff;
         }
 /* المنتجات */
 .products-section {
-    padding: 30px 20px;
-           opacity: 0; /* النص يكون مخفيًا في البداية */
-    transform: translateY(100px); /* بدء الحركة من اليمين */
-    animation: fadeInP 1.8s ease-out 1.8s forwards; /* مدة التأثير 1.8 ثانية مع تأخير 1.8 ثانية */
+       padding: 30px 20px;
+    opacity: 0; /* القسم مخفي في البداية */
+    transform: translateY(100px); /* يبدأ من الأسفل */
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
  /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
 }
-
+.products-section.show {
+    opacity: 1; /* يظهر بالكامل */
+    transform: translateY(0); /* يعود للوضع الطبيعي */
+}
+.products-section1 {
+       padding: 30px 20px;
+    opacity: 0; /* القسم مخفي في البداية */
+    transform: translateY(100px); /* يبدأ من الأسفل */
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
+ /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
+}
+.products-section1.show {
+    opacity: 1; /* يظهر بالكامل */
+    transform: translateY(0); /* يعود للوضع الطبيعي */
+}
+.products-section2 {
+       padding: 30px 20px;
+    opacity: 0; /* القسم مخفي في البداية */
+    transform: translateY(100px); /* يبدأ من الأسفل */
+    transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
+ /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
+}
+.products-section.show2 {
+    opacity: 1; /* يظهر بالكامل */
+    transform: translateY(0); /* يعود للوضع الطبيعي */
+}
 .products-section h3 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
 .products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+        align-items: center;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        padding: 10px;
+        width: 100%;
+        position: relative;
     
 }
+
+.products-container0 {
+    display: flex;
+    flex-wrap: wrap;  /* يسمح للمنتجات بالانتقال إلى السطر التالي إذا لم يكن هناك مساحة كافية */
+    justify-content: space-between;  /* يوزع المسافة بين العناصر بالتساوي */
+    gap: 20px;  /* المسافة بين العناصر */
+}
+
+.product0 {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 20px;
+    flex: 1 1 calc(50% - 20px); /* يعين لكل منتج مساحة 50% من العرض مع ترك فجوة بين العناصر */
+    min-width: 150px; /* الحد الأدنى لعرض العنصر */
+    max-width: 200px; /* الحد الأقصى لعرض العنصر */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* تأثير الظل */
+    transition: transform 0.3s ease-in-out;  /* تأثير عند التمرير */
+}
+ .products-wrapper, .products-wrapper1 {
+      display: flex;
+    flex-wrap: nowrap; /* منع التفاف العناصر */
+    gap: 15px;
+    overflow-x: hidden; /* السماح بالتمرير الأفقي */
+    scroll-behavior: smooth; /* التمرير السلس */
+    padding: 10px;
+    }
 
 .product {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 20px;
+     flex: 0 0 auto;
     width: 250px;
     margin: 10px;
+      min-width: 200px; /* يمكنك تغيير القيمة حسب الحجم المناسب */
+    max-width: 300px;
     text-align: center;
     box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.1);
 }
+ .scroll-btn {
+            position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #91746b;
+    border: none;
+    padding: 50px 10px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    }
+
+    .scroll-btn.left {
+        left: 0;
+            left: 10px;
+    }
+
+    .scroll-btn.right {
+        right: 0;
+    }
+
+    .scroll-btn:hover {
+        background-color: #d9d6d5;
+     
+    }
+.scroll-btmn {
+            position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #91746b;
+    border: none;
+    padding: 50px 10px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    }
+
+    .scroll-btmn.left {
+        left: 0;
+            left: 10px;
+    }
+
+    .scroll-btmn.right {
+        right: 0;
+    }
+
+    .scroll-btmn:hover {
+        background-color: #d9d6d5;
+     
+    }
+
 
 .product:hover {
     transform: scale(1.05);
@@ -413,6 +523,32 @@ background-color: #fff;
 /* كيفية الطلب */
 .how-to-order-section {
     padding: 30px 20px;
+     opacity: 0; /* القسم مخفي في البداية */
+   transform: translateX(500px); /* يبدأ من الأسفل */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.how-to-order-section.show {
+    opacity: 1; /* يظهر بالكامل */
+    transform: translateY(0); /* يعود للوضع الطبيعي */
+}
+
+.order-form-section {
+    padding: 50px;
+    max-width: 400px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #e0dcd7;
+    border-radius: 50px;
+     transform: translateY(100px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.order-form-section.show {
+    opacity: 1; /* يظهر بالكامل */
+    transform: translateY(0); /* يعود للوضع الطبيعي */
+}
+.order-form-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .steps {
@@ -485,19 +621,7 @@ form button:hover {
     background-color: #86654a;
 }
 
-.order-form-section {
-    padding: 50px;
-    max-width: 400px;
-    margin: auto;
-    background-color: #ffffff;
-    border: 1px solid #e0dcd7;
-    border-radius: 50px;
-}
 
-.order-form-section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
 
 /* حركات Fade لكل قسم */
 
@@ -553,7 +677,7 @@ form button:hover {
         font-size: 20px;
     }
 
-    .products-container {
+    .products-container, .products-container0 {
         gap: 10px;
     }
 
@@ -572,11 +696,11 @@ form button:hover {
 
 /* تنسيق الأزرار داخل السلة */
 .cart-item button {
-    margin: 5px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     background-color: #a38264;
     color: white;
     border: none;
+    font-family: B Arabic Style;
     border-radius: 5px;
     cursor: pointer;
 }

@@ -346,7 +346,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 .products-section {
        padding: 30px 20px;
     opacity: 0.3; /* القسم مخفي في البداية */
-    transform: translateY(-100px); /* يبدأ من الأسفل */
+    transform: translateX(100px); /* يبدأ من الأسفل */
     transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
  /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
 }

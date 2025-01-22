@@ -549,7 +549,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
     font-weight: bold;
     font-family: 'Tajawal', sans-serif;
     border: none;
-    padding: 5px 15px;
+    padding: 5px 5px;
     border-radius: 5px;
     cursor: pointer;
         bottom: 20px;

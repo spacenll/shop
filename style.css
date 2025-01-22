@@ -628,6 +628,8 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 }
 .order-form-section h2 {
     font-size: 18px;
+
+     font-weight: bold;
     margin-bottom: 20px;
 }
 

@@ -1,10 +1,7 @@
-@font-face {
-    font-family: 'B Arabic Style';
-    src: url('fonts/B-Arabic-Style.ttf') format('truetype');
-}
+
 
 body {
-    font-family: 'B Arabic Style'; /* الخط الأساسي */
+    font-family: 'Tajawal'; /* الخط الأساسي */
     margin: 0;
     padding: 0;
 background-color: #fff;
@@ -12,11 +9,53 @@ background-color: #fff;
     text-align: center;
     line-height: 1.6;
 }
+.tajawal-extralight {
+  font-family: "Tajawal", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.tajawal-light {
+  font-family: "Tajawal", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.tajawal-regular {
+  font-family: "Tajawal", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tajawal-medium {
+  font-family: "Tajawal", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.tajawal-bold {
+  font-family: "Tajawal", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tajawal-extrabold {
+  font-family: "Tajawal", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.tajawal-black {
+  font-family: "Tajawal", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+Read our FAQ
 
 
 
 .swal2-container button.swal2-styled.swal2-confirm {
-    font-family: 'B Arabic Style';
+    font-family: 'Tajawal';
     border: 0;
     border-radius: .25em;
     background-color: #a38264;
@@ -169,7 +208,7 @@ padding: 10px;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-family: B Arabic Style;
+    font-family: Tajawal;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease-in-out;
@@ -463,7 +502,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
     z-index: 8;
     background-color: #86654a;
     color: #ffffff;
-    font-family: 'B Arabic Style', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     border: none;
     padding: 5px 15px;
     border-radius: 5px;
@@ -497,7 +536,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
         z-index: 8;
     background-color: #86654a;
     color: #ffffff;
-    font-family: 'B Arabic Style', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     border: none;
     padding: 5px 15px;
     border-radius: 5px;
@@ -536,7 +575,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 
 .product-details button {
     background-color: #a38264;
-    font-family: 'B Arabic Style', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     color: #ffffff;
     border: none;
     padding: 10px 15px;
@@ -632,7 +671,7 @@ form input, form textarea, form button,  form select, form select option {
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #e0dcd7;
-    font-family: 'B Arabic Style';
+    font-family: 'Tajawal';
     border-radius: 20px;
     font-size: 20px;
 }
@@ -656,7 +695,7 @@ form button:hover {
 
 
 .cart-button {
-       font-family: 'B Arabic Style';
+       font-family: 'Tajawal';
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -726,7 +765,7 @@ form button:hover {
     background-color: #a38264;
     color: white;
     border: none;
-    font-family: B Arabic Style;
+    font-family: Tajawal;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -743,7 +782,7 @@ form button:hover {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    font-family: B Arabic Style;
+    font-family: Tajawal;
     cursor: pointer;
     transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out; /* إضافة انتقالات على التحول والتأثيرات */
 }

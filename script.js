@@ -108,7 +108,7 @@ function addToCart(productId, productName) {
 
 
      Swal.fire({
-        title: ` ${productName} تمت الإضافة!`,
+        title: `تمت الإضافة ! "${productName}" `,
     text: `صار بإمكانك ترسل طلبك او تضيف منتج ثاني لو تحب`,
         icon: 'success',
         confirmButtonText: 'تم'
@@ -138,18 +138,18 @@ closeCart();
 // الحصول على سعر المنتج
 function getProductPrice(productId) {
     const prices = {
-        101: { name: "كوب اللازورد", price: 6.5 },
-        102: { name: "كوب العقيق الأبيض", price: 6.5 },
-        103: { name: "كوب العقيق البرونزي", price: 6.5 },
-        104: { name: "كوب الكوارتز الوردي", price: 6.5 },
+        101: { name: "Lapis cup", price: 6.5 },
+        102: { name: "Onyx cup", price: 6.5 },
+        103: { name: "Ambra cup", price: 6.5 },
+        104: { name: "Rosa cup", price: 6.5 },
         
-        105: { name: "كوب التوباز", price: 4.5 },
-        106: { name: "كوب اليشم الكريمي", price: 4.5 },
+        105: { name: "Topaz Brown cup", price: 4.5 },
+        106: { name: "Yashma cup", price: 4.5 },
         
-        107: { name: "اناء جوز الهند", price: 3.5 },
+        107: { name: "Couco Pot", price: 3.5 },
         
-        108: { name: "كوب الأفينتورين", price: 5.5 },
-        109: { name: "كوب البن", price: 5.5 }
+        108: { name: "Azura cup", price: 5.5 },
+        109: { name: "Creamy Pino cup", price: 5.5 }
     };
     return prices[productId] || { name: "غير معروف", price: 0 };
 }
@@ -179,7 +179,8 @@ function showCart() {
             itemDiv.className = 'cart-item';
             itemDiv.innerHTML = `
                 <p>
-                    ${item.name} -  ${item.price} ريال - ${item.quantity}
+         ‎ ${item.price} ‎ = ${item.name} ‎ ×  ‎  ${item.quantity}  ر.ع   ‎
+
                     <button onclick="increaseQuantity(${index})">+</button>
                     <button onclick="decreaseQuantity(${index})">-</button>
                     <button onclick="removeFromCart(${index})">حذف</button>

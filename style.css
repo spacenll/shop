@@ -174,7 +174,7 @@ Read our FAQ
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #6b5943;
+      background-color: #191919;
       z-index: 9999;
             transition: opacity 1.2s ease;
     }
@@ -345,13 +345,13 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 .products-section {
        padding: 30px 20px;
     opacity: 0.3; /* القسم مخفي في البداية */
-    transform: translateX(100px); /* يبدأ من الأسفل */
+    transform: translateX(0px); /* يبدأ من الأسفل */
     transition: opacity 1.8s ease-out, transform 1.8s ease-out; /* إضافة تأثير الحركة */
  /* مدة التأثير 1.5 ثانية مع تأخير 1.5 ثانية */
 }
 .products-section.show {
     opacity: 1; /* يظهر بالكامل */
-        
+            background: #efefef;
     transform: translateY(0); /* يعود للوضع الطبيعي */
 }
 .products-section1 {
@@ -394,7 +394,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 /* الجوز */
 .top-product-section {
     padding: 30px 20px;
-    background-color: #fff;
+    background-color: #f1f1f1;
     box-shadow: 0 2px 20px 0px rgb(0 0 0 / 4%);
      opacity: 0; /* القسم مخفي في البداية */
     transform: translateY(10px); /* يبدأ من الأسفل */
@@ -603,6 +603,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 .how-to-order-section {
     padding: 30px 20px;
      opacity: 0; /* القسم مخفي في البداية */
+    background-color: #f1f1f1;
    transform: translateX(500px); /* يبدأ من الأسفل */
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
@@ -616,7 +617,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
     max-width: 400px;
     margin: auto;
     background-color: #ffffff;
-    border: 1px solid #e0dcd7;
+    
     border-radius: 50px;
      transform: translateY(100px); 
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -667,7 +668,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 }
 
 .step p {
-     font-size: 12px;  
+     font-size: 15px;  
 }
 
 /* فورم الطلب */
@@ -690,7 +691,7 @@ form input, form textarea, form button,  form select, form select option {
 }
 body p {
    font-size: 18px; 
-   font-weight: bold;
+
 }
 form button {
     background-color: #000;
@@ -743,7 +744,7 @@ form button:hover {
     }
 
     .product h4 {
-        font-size: 16px; /* تحسين حجم اسم المنتج */
+        font-size: 18px; /* تحسين حجم اسم المنتج */
     }
 
     .product button {

@@ -12,39 +12,6 @@
             const overlay = document.getElementById('overlay');
             overlay.style.display = 'none';
         }
-     let leftClicks = 0; // عداد النقرات على زر اليسار
-let rightClicks = 0; // عداد النقرات على زر اليمين
-
-function scrollContainer(direction) {
-    const container = document.querySelector('.products-wrapper');
-    const rightBtn = document.querySelector('.scroll-btn.right');
-    const leftBtn = document.querySelector('.scroll-btn.left');
-
-    if (container) {
-        const scrollAmount = 250; // مقدار التمرير لكل نقرة
-        const maxClicks = 4; // عدد الضغطات قبل إخفاء الزر
-
-        if (direction === 'left') {
-            container.scrollLeft -= scrollAmount;
-            rightClicks = 0; // إعادة تعيين عداد اليمين عند التمرير لليسار
-            leftClicks++; // زيادة عداد اليسار
-            rightBtn.style.display = 'block'; // إظهار زر اليمين
-
-            if (leftClicks >= maxClicks) {
-                leftBtn.style.display = 'none'; // إخفاء زر اليسار
-            }
-        } else if (direction === 'right') {
-            container.scrollLeft += scrollAmount;
-            leftClicks = 0; // إعادة تعيين عداد اليسار عند التمرير لليمين
-            rightClicks++; // زيادة عداد اليمين
-            leftBtn.style.display = 'block'; // إظهار زر اليسار
-
-            if (rightClicks >= maxClicks) {
-                rightBtn.style.display = 'none'; // إخفاء زر اليمين
-            }
-        }
-    }
-}
 
 
     // التأكد من تحميل الصفحة بالكامل قبل إضافة أحداث الأزرار

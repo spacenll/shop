@@ -235,7 +235,7 @@ function showCart() {
             itemDiv.className = 'cart-item';
             itemDiv.innerHTML = `
                 <p>
-                    ${item.name} - السعر: ${item.price} ريال - الكمية: ${item.quantity}
+                    ${item.name} -  ${item.price} ريال - ${item.quantity}
                     <button onclick="increaseQuantity(${index})">+</button>
                     <button onclick="decreaseQuantity(${index})">-</button>
                     <button onclick="removeFromCart(${index})">حذف</button>

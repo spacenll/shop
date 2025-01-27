@@ -14,29 +14,6 @@
         }
 
 
-    // التأكد من تحميل الصفحة بالكامل قبل إضافة أحداث الأزرار
-    window.addEventListener('load', function() {
-        const leftBtn = document.querySelector('.scroll-btn.left');
-        const rightBtn = document.querySelector('.scroll-btn.right');
-
-        if (leftBtn) {
-            leftBtn.addEventListener('click', function() {
-                scrollContainer('left');
-            });
-        }
-
-        if (rightBtn) {
-            rightBtn.addEventListener('click', function() {
-                scrollContainer('right');
-            });
-        }
-});
-
-
-
-// التأكد من تحميل الصفحة بالكامل قبل إضافة أحداث الأزرار
-
-
 
 const productsSection = document.querySelector('.products-section');
 const howSection = document.querySelector('.how-to-order-section');

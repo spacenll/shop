@@ -693,7 +693,7 @@ body p {
    font-weight: bold;
 }
 form button {
-    background-color: #a38264;
+    background-color: #000;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -701,7 +701,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #86654a;
+    background-color: #c3c3c3;
 }
 
 

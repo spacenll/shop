@@ -198,15 +198,14 @@ Read our FAQ
             margin: 0;
         }
 .product-price{
-        background: #f8f4f0;
-    border-radius: 20px;
-    position: relative;
+position: relative;
     font-size: 14px;
     font-weight: bold;
     height: 85px;
-padding: 10px;
     z-index: 6;
+    color: darkgreen;
     margin: 20px 0 -35px;
+    
 }
 .go-to-order-btn {
     background-color: #86654a;
@@ -510,7 +509,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 .product button {
     position: relative;
     z-index: 8;
-    background-color: #86654a;
+    background-color: #000;
     color: #ffffff;
     font-family: 'Tajawal', sans-serif;
     border: none;
@@ -522,7 +521,7 @@ background-size: cover; /* لجعل الصورة تغطي الخلفية بال�
 }
 
 .product button:hover {
-    background-color: #86654a;
+    background-color: #c3c3c3;
 }
 
 

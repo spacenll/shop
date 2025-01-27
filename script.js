@@ -164,10 +164,10 @@ function addToCart(productId, productName) {
 
 
      Swal.fire({
-        title: 'تمت الإضافة!',
-    text: `ㅤㅤㅤㅤㅤتمت اضافة ${productName} الى السلة ㅤㅤㅤㅤ صار بإمكانك ترسل طلبك او تضيف منتج ثاني لو تحب`,
+        title: ` ${productName} تمت الإضافة!`,
+    text: `صار بإمكانك ترسل طلبك او تضيف منتج ثاني لو تحب`,
         icon: 'success',
-        confirmButtonText: 'اوك'
+        confirmButtonText: 'تم'
     });
 
     updateCartTotal();
